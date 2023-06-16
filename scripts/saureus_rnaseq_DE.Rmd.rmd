@@ -1,0 +1,35 @@
+---
+title: "RNA seq analysis resistant S. aureus"
+output: html_document
+---
+
+Import libraries
+```{r, message=FALSE}
+library(edgeR)
+library(circlize)
+library(dplyr)
+library(ggplot2)
+library(ggpubr)
+library('RUVSeq')
+library(RColorBrewer)
+library(MetBrewer)
+library(EDASeq)
+library(ggrepel)
+library(viridis)
+library(svglite)
+library(ComplexHeatmap)
+library(tidyverse)
+library(grid)
+```
+position the caret at any line or the code chunk, then click "+".
+
+The code chunk appears:
+```{r}
+```
+
+Type any R code in the chunk, for example:
+```{r}
+mycars <- within(mtcars, { cyl <- ordered(cyl) })
+mycars
+```
+
