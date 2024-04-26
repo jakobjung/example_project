@@ -1,0 +1,31 @@
+# upec_egenes.proteinortho.tsv statistics:
+# number of groups that contains at least p% species:
+# p	species	groups	genes in groups
+0%	0	287 (100%)	574 (100%)	
+50%	1	287 (100%)	574 (100%)	
+100%	2	287 (100%)	574 (100%)	
+# NOTE: p=100% correspond to the core proteome and p=0% to all groups
+# number of groups for each input species:
+egenes_k12.fasta	287	100%
+genes_upec.fasta	287	100%
+
+# ----------------------------------
+# graph file statistics:
+
+# The adjacency matrix, the number of edges between 2 species
+# file	egenes_k12.fasta	genes_upec.fasta	
+egenes_k12.fasta	0	287
+genes_upec.fasta	287	0
+
+# file	average number of edges
+egenes_k12.fasta	143.5	
+genes_upec.fasta	143.5	
+
+# The 2-path matrix, the number of paths between 2 species of length 2
+# file	egenes_k12.fasta	genes_upec.fasta	
+egenes_k12.fasta(0)	82369	0
+genes_upec.fasta(1)	0	82369
+
+# file	average number of 2-paths
+egenes_k12.fasta(0)	41184.5
+genes_upec.fasta(1)	41184.5

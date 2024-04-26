@@ -1,0 +1,36 @@
+SYSTEMCALL of Thu Jun  1 15:39:20 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=1e-05,purity=-1,coverage=50,identity=25,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/miniconda3/envs/UPEC_K12_essgenes_2023_03/bin/,run_id=,threads_per_process=1,um=0)--------
+SYSTEMCALL of Thu Jun  1 15:49:48 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn --e=1e-01
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=1e-01,purity=-1,coverage=50,identity=25,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/miniconda3/envs/UPEC_K12_essgenes_2023_03/bin/,run_id=,threads_per_process=1,um=0)--------
+SYSTEMCALL of Thu Jun  1 15:50:29 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn --e=5
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=5,purity=-1,coverage=50,identity=25,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/miniconda3/envs/UPEC_K12_essgenes_2023_03/bin/,run_id=,threads_per_process=1,um=0)--------
+SYSTEMCALL of Thu Jun  1 15:51:16 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn --e=500
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=500,purity=-1,coverage=50,identity=25,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/miniconda3/envs/UPEC_K12_essgenes_2023_03/bin/,run_id=,threads_per_process=1,um=0)--------
+SYSTEMCALL of Thu Jun  1 15:58:07 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn --e=500 --identity=10
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=500,purity=-1,coverage=50,identity=10,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/miniconda3/envs/UPEC_K12_essgenes_2023_03/bin/,run_id=,threads_per_process=1,um=0)--------
+SYSTEMCALL of Thu Jun  1 16:07:08 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn --e=500 --identity=10 --cov=10
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=500,purity=-1,coverage=10,identity=10,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/miniconda3/envs/UPEC_K12_essgenes_2023_03/bin/,run_id=,threads_per_process=1,um=0)--------
+SYSTEMCALL of Thu Jun  1 16:08:14 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn --e=500 --identity=5 --cov=5
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=500,purity=-1,coverage=5,identity=5,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/miniconda3/envs/UPEC_K12_essgenes_2023_03/bin/,run_id=,threads_per_process=1,um=0)--------
+SYSTEMCALL of Fri Jun 23 15:37:53 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn --e=500 --identity=5 --cov=5
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=500,purity=-1,coverage=5,identity=5,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/anaconda3/bin/,run_id=,threads_per_process=1,um=0)--------
+SYSTEMCALL of Fri Nov 17 16:27:08 2023:
+proteinortho --project=upec_egenes ./egenes_k12.fasta ./genes_upec.fasta --p=blastn --e=500 --identity=5 --cov=5
+
+Parameter-vector : (version=6.2.3,step=0,verbose=1,debug=0,synteny=0,duplication=2,cs=3,alpha=0.5,connectivity=0.1,cpus=0,evalue=500,purity=-1,coverage=5,identity=5,blastmode=blastn+,sim=0.95,report=3,keep=0,force=0,selfblast=0,twilight=0,core=0,coreMinSpecies=0,coreMaxProts=100,identical=0,range=-1,singles=0,clean=0,blastOptions=,makeBlastOptions=,nograph=0,xml=0,desc=0,tmp_path=./proteinortho_cache_upec_egenes/,blastversion=unknown,binpath=,makedb=,blast=,jobs_todo=0,project=upec_egenes,inproject=upec_egenes,po_path=/home/jj/anaconda3/bin/,run_id=,threads_per_process=1,um=0)--------

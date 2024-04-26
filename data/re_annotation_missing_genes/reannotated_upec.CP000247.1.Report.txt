@@ -1,0 +1,276 @@
+
+Gene_ID	error	StartBad	StopBad	frameshifts	splicesites	length	product	errorStill	StartStillBad	StopStillBad	frameshiftsStill	JoinExons	PossiblePseudo	CorrectionLog	
+b0012	1	0	1	0	0	0	uncharacterized protein MbiA"	0	0	0	0	0	0	 // Corrected Stop	
+b0029	2	0	1	0	0	1	4-hydroxy-3-methylbut-2-enyl diphosphate	0	0	0	0	0	0	 // Corrected Stop	
+b0049	1	0	1	0	0	0	diadenosine tetraphosphatase"	0	0	0	0	0	0	 // Corrected Stop	
+b0053	1	0	0	15	0	0	chaperone SurA"	0	0	0	0	0	0	0	
+b0058	3	1	1	1	0	0	23S rRNA pseudouridine(746) and tRNA	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b0064	2	0	1	2	0	0	DNA-binding transcriptional dual regulator AraC"	0	0	0	0	0	0	 // Corrected Stop	
+b0099	1	0	1	0	0	0	8-oxo-dGTP diphosphatase"	0	0	0	0	0	0	 // Corrected Stop	
+b0112	1	1	0	0	0	0	aromatic amino acid:H(+) symporter AroP"	0	0	0	0	0	0	 // Corrected Start	
+b0117	2	0	1	2	0	0	DUF3300 domain-containing protein YacH"	0	0	0	0	0	0	 // Corrected Stop	
+b0125	2	1	0	7	0	0	hypoxanthine phosphoribosyltransferase"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b0132	1	0	1	0	0	0	recombination-promoting nuclease RpnC"	0	0	0	0	0	0	 // Corrected Stop	
+b0143	1	1	0	0	0	0	poly(A) polymerase I"	0	0	0	0	0	0	 // Corrected Start	
+b0158	3	0	1	2	0	1	vitamin B12 ABC transporter periplasmic binding	0	0	0	0	0	0	 // Corrected Stop	
+b0170	1	1	0	0	0	0	protein chain elongation factor EF-Ts"	0	0	0	0	0	0	 // Corrected Start	
+b0172	1	1	0	0	0	0	ribosome-recycling factor"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start	
+b0188	1	0	1	0	0	0	tRNA(Ile)-lysidine synthetase"	0	0	0	0	0	0	 // Corrected Stop	
+b0193	3	0	1	7	0	1	peptidase C92 family protein YaeF"	0	0	0	0	0	0	 // Corrected Stop	
+b0200	2	0	1	1	0	0	D-glycero-beta-D-manno-heptose-1,7-bisphosphate	0	0	0	0	0	0	 // Corrected Stop	
+b0210	1	0	0	21	0	0	putative S-adenosylmethionine-dependent	0	0	0	0	0	0	0	
+b0295	3	0	1	5	0	1	uncharacterized protein YkgL"	0	0	0	0	0	0	 // Corrected Stop	
+b0322	2	0	1	0	0	1	putative uncharacterized protein YahH"	0	0	0	0	0	0	 // Corrected Stop	
+b0327	3	0	1	3	0	1	uncharacterized protein YahM"	0	0	0	0	0	0	 // Corrected Stop	
+b0331	1	0	0	0	0	1	2-methylisocitrate lyase"	0	0	0	0	0	0	0	
+b0364	1	0	1	0	0	0	putative deacetylase YaiS"	0	0	0	0	0	0	 // Corrected Stop	
+b0365	1	0	0	14	0	0	taurine ABC transporter periplasmic binding	0	0	0	0	0	0	0	
+b0399	2	0	1	0	0	1	DNA-binding transcriptional dual regulator PhoB"	0	0	0	0	0	0	 // Corrected Stop	
+b0423	1	0	0	14	0	0	tRNA uridine 4-sulfurtransferase"	0	0	0	0	0	0	0	
+b0453	3	0	1	2	0	1	PF09619 family lipoprotein YbaY"	0	0	0	0	0	0	 // Corrected Stop	
+b0463	1	0	0	17	0	0	multidrug efflux pump membrane fusion lipoprotein	0	0	0	0	0	0	0	
+b0470	1	0	0	0	2	0	DNA polymerase III subunit gamma"	0	0	0	0	0	0	0	
+b0476	2	0	1	0	0	1	acetylesterase"	0	0	0	0	0	0	 // Corrected Stop	
+b0481	4	1	1	1	0	1	Cys-tRNA(Pro)/Cys-tRNA(Cys) deacylase YbaK"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b0484	2	0	0	16	2	0	soluble Cu(+) chaperone"	0	0	0	0	0	0	0	
+b0488	1	1	0	0	0	0	NfeD-like family protein YbbJ"	0	0	0	0	0	0	 // Corrected Start	
+b0495	1	0	0	13	0	0	putative ABC transporter ATP-binding protein	0	0	0	0	0	0	0	
+b0537	4	1	1	16	0	1	putative integrase"	0	0	0	11	0	0	 // Corrected Start // Corrected Stop	
+b0561	1	0	1	0	0	0	putative tail fiber assembly protein TfaD"	0	0	0	0	0	0	 // Corrected Stop	
+b0563	1	0	1	0	0	0	protein TfaX"	0	0	0	0	0	0	 // Corrected Stop	
+b0572	1	0	1	0	0	0	copper/silver export system outer membrane	0	0	0	0	0	0	 // Corrected Stop	
+b0573	1	1	0	0	0	0	copper/silver export system periplasmic binding	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b0576	3	0	1	1	0	1	phenylalanine:H(+) symporter PheP"	0	0	0	0	0	0	 // Corrected Stop	
+b0579	1	0	1	0	0	0	PF04237 family protein YbdF"	0	0	0	0	0	0	 // Corrected Stop	
+b0603	1	1	0	0	0	0	putative LysR family DNA-binding transcriptional	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b0629	3	0	1	1	0	1	putative DNA-binding transcriptional regulator	0	0	0	0	0	0	 // Corrected Stop	
+b0651	4	1	1	1	0	1	pyrimidine-specific ribonucleoside hydrolase	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b0695	1	0	0	48	0	0	sensor histidine kinase KdpD"	0	0	0	0	0	0	0	
+b0711	2	0	1	0	0	1	5-oxoprolinase component B"	0	0	0	0	0	0	 // Corrected Stop	
+b0716	4	1	1	9	0	1	putative fimbrial protein YbgO"	0	0	0	3	0	0	 // Corrected Start // Corrected Stop	
+b0768	1	0	0	17	0	0	putative DNA-binding transcriptional regulator	0	0	0	0	0	0	0	
+b0798	2	1	0	9	0	0	N-glycosidase YbiA"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start	
+b0799	1	1	0	0	0	0	ATP-dependent DNA helicase DinG"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b0830	1	0	0	24	0	0	glutathione ABC transporter periplasmic binding	0	0	0	0	0	0	0	
+b0860	3	0	1	3	0	1	L-arginine ABC transporter periplasmic binding	0	0	0	0	0	0	 // Corrected Stop	
+b0927	3	0	1	1	0	1	hydroxyacylglutathione hydrolase GloC"	0	0	0	0	0	0	 // Corrected Stop	
+b0931	1	0	0	7	0	0	nicotinate phosphoribosyltransferase"	0	0	0	0	0	0	0	
+b0980	1	0	1	0	0	0	periplasmic phosphoanhydride phosphatase/multiple	0	0	0	0	0	0	 // Corrected Stop	
+b0993	3	0	1	1	0	1	sensor histidine kinase TorS"	0	0	0	0	0	0	 // Corrected Stop	
+b1001	4	1	1	14	0	1	uncharacterized protein YccE"	0	0	0	6	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b1025	1	0	1	0	0	0	putative diguanylate cyclase DgcT"	0	0	0	0	0	0	 // Corrected Stop	
+b1037	1	0	0	13	0	0	curli secretion channel"	0	0	0	0	0	0	0	
+b1115	1	0	0	1	0	0	inner membrane protein YcfT"	0	0	0	0	0	0	0	
+b1118	1	0	0	6	0	0	lipoprotein release complex - inner membrane	0	0	0	0	0	0	0	
+b1120	6	0	1	1	0	1	CobB-S"	0	0	0	0	0	0	 // Corrected Stop // Corrected Stop	
+b1136	3	0	1	1	0	1	isocitrate dehydrogenase"	0	0	0	0	0	0	 // Corrected Stop	
+b1168	2	1	0	10	0	0	putative c-di-GMP phosphodiesterase PdeG"	0	0	0	0	0	0	 // Corrected Start	
+b1182	2	1	0	18	0	0	hemolysin E"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b1203	4	1	1	11	0	1	redox-responsive ATPase YchF"	0	0	0	2	0	0	 // Corrected Start // Corrected Stop	
+b1270	2	0	1	10	0	0	cobinamide/cobalamin adenosyltransferase"	0	0	0	6	0	0	 // Corrected Stop	
+b1296	4	1	1	14	0	1	putrescine:H(+) symporter PuuP"	0	0	0	1	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b1302	2	1	0	17	0	0	4-aminobutyrate aminotransferase PuuE"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b1329	1	0	0	23	0	0	murein tripeptide ABC transporter periplasmic	0	0	0	0	0	0	0	
+b1336	4	1	1	13	0	1	p-aminobenzoyl glutamate:H(+) symporter"	0	0	0	3	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b1345	4	1	1	19	0	1	putative integrase"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b1376	4	1	1	2	0	1	universal stress protein F"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b1407	2	0	1	14	0	0	DUF2773 domain-containing protein YdbD"	0	0	0	13	0	0	 // Corrected Stop	
+b1411	1	0	0	18	0	0	phosphatase domain-containing protein YnbD"	0	0	0	0	0	0	0	
+b1421	1	0	0	28	0	0	methyl-accepting chemotaxis protein Trg"	0	0	0	0	0	0	0	
+b1433	2	0	1	1	0	0	putative transport protein YdcO"	0	0	0	0	0	0	 // Corrected Stop	
+b1438	2	1	0	6	0	0	antitoxin of the HicA-HicB toxin-antitoxin	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b1449	3	0	1	11	0	1	NADPH-dependent curcumin/dihydrocurcumin	0	0	0	6	0	0	 // Corrected Stop	
+b1450	4	1	1	5	0	1	DNA-binding transcriptional dual regulator McbR"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b1454	3	0	1	10	0	1	putative glutathione S-transferase YncG"	0	0	0	0	0	0	 // Corrected Stop	
+b1462	3	1	1	0	0	1	flavin reductase-like protein YddH"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b1474	1	0	0	1	0	0	formate dehydrogenase N subunit alpha"	0	0	0	0	0	0	0	
+b1490	4	1	1	6	0	1	diguanylate cyclase DosC"	0	0	0	4	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b1504	2	0	1	6	0	0	putative fimbrial protein YdeS"	0	0	0	0	0	0	 // Corrected Stop	
+b1505	2	1	0	2	0	0	fimbrial usher domain-containing protein YdeT"	0	0	0	0	0	0	 // Corrected Start	
+b1518	4	1	1	7	0	1	(4S)-4-hydroxy-5-phosphonooxypentane-2,3-dione	0	0	0	6	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b1527	2	0	1	0	0	1	protein YneK"	0	0	0	0	0	0	 // Corrected Stop	
+b1536	2	1	0	1	0	0	BOF family protein YdeI"	0	0	0	0	0	0	 // Corrected Start	
+b1537	4	1	1	9	0	1	PF02464 family protein YdeJ"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b1541	4	1	1	1	0	1	putative selenoprotein YdfZ"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b1543	1	1	0	0	0	0	putative transporter YdfJ"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b1590	2	1	0	9	0	0	putative menaquinol dehydrogenase"	0	0	0	0	0	0	 // Corrected Start	
+b1629	1	1	0	0	0	0	SoxR [2Fe-2S] reducing system protein RsxC"	0	0	0	0	0	0	 // Corrected Start	
+b1637	1	0	0	1	0	0	tyrosine--tRNA ligase"	0	0	0	0	0	0	0	
+b1653	1	0	0	3	0	0	ATP-dependent helicase Lhr"	0	0	0	0	0	0	0	
+b1668	1	0	1	0	0	0	FAD/NAD(P) binding domain-containing protein	0	0	0	0	0	0	 // Corrected Stop	
+b1718	1	1	0	0	0	0	translation initiation factor IF-3"	0	0	0	0	0	0	 // Corrected Start	
+b1733	1	0	1	0	0	0	chitooligosaccharide monodeacetylase ChbG"	0	0	0	0	0	0	 // Corrected Stop	
+b1757	2	1	0	14	0	0	molybdopterin synthase sulfurtransferase"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b1763	2	0	1	1	0	0	DNA topoisomerase III"	0	0	0	0	0	0	 // Corrected Stop	
+b1799	4	1	1	9	0	1	DNA-binding transcriptional regulator DmlR"	0	0	0	2	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b1803	3	1	1	15	0	0	carnitine monooxygenase subunit YeaX"	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b1826	2	0	1	1	0	0	PhoQ kinase inhibitor"	0	0	0	0	0	0	 // Corrected Stop	
+b1865	1	1	0	0	0	0	dihydroneopterin triphosphate diphosphatase"	0	0	0	0	0	0	 // Corrected Start	
+b1866	2	0	1	0	0	1	aspartate--tRNA ligase"	0	0	0	0	0	0	 // Corrected Stop	
+b1872	1	0	0	1	0	0	trimethylamine N-oxide reductase 2"	0	0	0	0	0	0	0	
+b1885	3	0	1	2	0	1	methyl-accepting chemotaxis protein Tap"	0	0	0	0	0	0	 // Corrected Stop	
+b1913	2	1	0	1	0	0	UvrABC excision nuclease subunit C"	0	0	0	0	0	0	 // Corrected Start	
+b1920	4	1	1	6	0	1	cystine ABC transporter periplasmic binding	0	0	0	5	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b1971	1	0	0	11	0	0	protein-L-methionine sulfoxide reductase	0	0	0	0	0	0	0	
+b1976	4	1	1	12	0	1	Mlc titration factor"	0	0	0	2	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b2002	4	1	1	1	0	1	RadC-like JAB domain-containing protein YeeS"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b2014	3	1	1	0	0	1	putrescine:H(+) symporter PlaP"	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b2049	3	0	1	1	0	1	mannose-1-phosphate guanylyltransferase"	0	0	0	0	0	0	 // Corrected Stop	
+b2067	3	0	1	1	0	1	putative diguanylate cyclase DgcE"	0	0	0	0	0	0	 // Corrected Stop	
+b2070	1	1	0	0	0	0	putative serine/threonine-protein kinase YegI"	0	0	0	0	0	0	 // Corrected Start	
+b2073	1	0	0	1	0	0	IPR002035 domain-containing protein YegL"	0	0	0	0	0	0	0	
+b2079	1	0	0	0	0	1	DNA-binding transcriptional activator BaeR"	0	0	0	0	0	0	0	
+b2091	1	0	0	22	0	0	galactitol-1-phosphate 5-dehydrogenase"	0	0	0	0	0	0	0	
+b2110	1	0	0	25	0	0	putative fimbrial chaperone YehC"	0	0	0	0	0	0	0	
+b2115	1	0	1	0	0	0	PF05406 family protein YehF"	0	0	0	0	0	0	 // Corrected Stop	
+b2122	3	0	1	2	0	1	SWIM zinc finger domains-containing protein YehQ"	0	0	0	0	0	0	 // Corrected Stop	
+b2129	3	0	1	2	0	1	glycine betaine ABC transporter ATP binding	0	0	0	0	0	0	 // Corrected Stop	
+b2140	1	0	1	0	0	0	tRNA-dihydrouridine(16) synthase"	0	0	0	0	0	0	 // Corrected Stop	
+b2159	3	0	1	1	0	1	endonuclease IV"	0	0	0	0	0	0	 // Corrected Stop	
+b2161	3	0	1	1	0	1	putative nucleoside transporter"	0	0	0	0	0	0	 // Corrected Stop	
+b2195	2	0	1	0	0	1	thiol:disulfide oxidoreductase CcmG"	0	0	0	0	0	0	 // Corrected Stop	
+b2199	1	0	0	4	0	0	cytochrome c maturation protein C"	0	0	0	0	0	0	0	
+b2211	1	0	0	1	0	0	ABC transporter family protein/microcin J25	0	0	0	0	0	0	0	
+b2221	1	0	0	6	0	0	acetyl-CoA:acetoacetyl-CoA transferase subunit	0	0	0	0	0	0	0	
+b2242	2	0	1	1	0	0	anaerobic glycerol-3-phosphate dehydrogenase	0	0	0	0	0	0	 // Corrected Stop	
+b2267	1	1	0	0	0	0	putative acetyltransferase ElaA"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start	
+b2269	2	0	1	3	0	0	protease ElaD"	0	0	0	0	0	0	 // Corrected Stop	
+b2308	3	0	1	2	0	1	lysine/arginine/ornithine ABC	0	0	0	0	0	0	 // Corrected Stop	
+b2365	4	1	1	12	0	1	D-serine transporter"	0	0	0	8	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b2375	1	0	0	22	0	0	protein YfdX"	0	0	0	0	0	0	0	
+b2419	3	0	1	10	0	1	DUF5329 domain-containing protein YfeK"	0	0	0	0	0	0	 // Corrected Stop	
+b2426	2	0	1	0	0	1	oxidoreductase UcpA"	0	0	0	0	0	0	 // Corrected Stop	
+b2430	2	0	1	6	0	0	penicillin binding protein 4B"	0	0	0	4	0	0	 // Corrected Stop	
+b2509	1	0	1	0	0	0	exodeoxyribonuclease VII subunit XseA"	0	0	0	0	0	0	 // Corrected Stop	
+b2511	2	1	1	0	0	0	50S ribosomal subunit stability factor"	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b2524	2	0	1	0	0	1	accessory iron-sulfur cluster assembly protein	0	0	0	0	0	0	 // Corrected Stop	
+b2551	2	0	1	0	0	1	serine hydroxymethyltransferase"	0	0	0	0	0	0	 // Corrected Stop	
+b2737	2	0	1	0	0	1	putative 3-oxo-tetronate kinase YgbK"	0	0	0	0	0	0	 // Corrected Stop	
+b2740	2	0	0	7	0	1	putative transporter YgbN"	0	0	0	0	0	0	0	
+b2741	3	0	1	14	0	1	RNA polymerase sigma factor RpoS"	0	0	0	0	0	0	 // Corrected Stop	
+b2743	1	0	0	1	0	0	protein-L-isoaspartate O-methyltransferase"	0	0	0	0	0	0	0	
+b2777	4	1	1	3	0	1	putative 7-carboxy-7-deazaguanine synthase QueE"	0	0	0	2	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b2797	1	0	0	8	0	0	L-serine deaminase II"	0	0	0	0	0	0	0	
+b2805	1	0	0	18	0	0	DNA-binding transcriptional activator FucR"	0	0	0	0	0	0	0	
+b2813	1	0	1	0	0	0	membrane-bound lytic murein transglycosylase A"	0	0	0	0	0	0	 // Corrected Stop	
+b2875	1	0	1	0	0	0	XdhC-CoxI family protein YqeB"	0	0	0	0	0	0	 // Corrected Stop	
+b2891	1	0	0	0	2	0	peptide chain release factor RF2"	0	0	0	0	0	0	0	
+b2917	3	0	1	21	0	1	methylmalonyl-CoA mutase"	0	0	0	12	0	0	 // Corrected Stop	
+b2920	2	1	0	20	0	0	propionyl-CoA:succinate CoA transferase"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start	
+b2925	2	0	1	0	0	1	fructose-bisphosphate aldolase class II"	0	0	0	0	0	0	 // Corrected Stop	
+b2930	3	0	1	2	0	1	fructose 1,6-bisphosphatase YggF"	0	0	0	0	0	0	 // Corrected Stop	
+b2938	2	0	0	28	0	1	biosynthetic arginine decarboxylase"	0	0	0	0	0	0	0	
+b2950	2	0	1	0	0	1	Type II/IV secretion system family protein"	0	0	0	0	0	0	 // Corrected Stop	
+b2970	2	1	0	1	0	0	putative type II secretion system C-type protein	0	0	0	0	0	0	 // Corrected Start	
+b2981	2	1	0	1	0	0	putative DNA-binding transcriptional regulator	0	0	0	0	0	0	 // Corrected Start	
+b2983	3	0	1	19	0	1	putative transport protein YghQ"	0	0	0	5	0	0	 // Corrected Stop	
+b2989	1	0	0	14	0	0	disulfide reductase/organic hydroperoxide	0	0	0	0	0	0	0	
+b3005	2	0	1	0	0	1	Ton complex subunit ExbD"	0	0	0	0	0	0	 // Corrected Stop	
+b3023	4	1	1	1	0	1	DNA-binding transcriptional repressor YgiV"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b3039	4	1	1	21	0	1	4,5-DOPA dioxygenase extradiol"	0	0	0	3	0	0	 // Corrected Start // Corrected Stop	
+b3042	1	0	1	0	0	0	ubiquinone biosynthesis accessory factor UbiK"	0	0	0	0	0	0	 // Corrected Stop	
+b3053	1	0	0	33	0	0	fused glutamine synthetase deadenylase/glutamine	0	0	0	0	0	0	0	
+b3057	2	0	1	0	0	1	undecaprenyl pyrophosphate phosphatase"	0	0	0	0	0	0	 // Corrected Stop	
+b3081	1	1	0	0	0	0	2,4-dienoyl-CoA reductase"	0	0	0	0	0	0	 // Corrected Start	
+b3083	1	0	0	3	0	0	ribosome-dependent mRNA interferase toxin HigB"	0	0	0	0	0	0	0	
+b3103	1	0	1	0	0	0	putative inner membrane protein"	0	0	0	0	0	0	 // Corrected Stop	
+b3105	1	0	1	0	0	0	DNA-binding transcriptional activator YhaJ"	0	0	0	0	0	0	 // Corrected Stop	
+b3120	2	0	1	4	0	0	protein YhaB"	0	0	0	3	0	0	 // Corrected Stop	
+b3141	1	0	1	0	0	0	putative deaminase AgaI"	0	0	0	0	0	0	 // Corrected Stop	
+b3146	1	0	1	0	0	0	16S rRNA 2'-O-ribose C1402 methyltransferase"	0	0	0	0	0	0	 // Corrected Stop	
+b3173	1	0	0	11	0	0	putative hydrolase YhbX"	0	0	0	0	0	0	0	
+b3196	1	0	0	7	0	0	putative transport protein YrbG"	0	0	0	0	0	0	0	
+b3212	1	0	0	18	0	0	glutamate synthase subunit GltB"	0	0	0	0	0	0	0	
+b3235	3	0	1	1	0	1	serine endoprotease"	0	0	0	0	0	0	 // Corrected Stop	
+b3334	1	0	1	0	0	0	Type II secretion system protein GspM"	0	0	0	0	0	0	 // Corrected Stop	
+b3341	2	0	1	1	0	0	30S ribosomal subunit protein S7"	0	0	0	0	0	0	 // Corrected Stop	
+b3348	4	1	1	3	0	1	protein SlyX"	0	0	0	0	0	0	 // No unique shift for model found... MANUAL check // Corrected Start // Corrected Stop	
+b3350	1	0	0	1	0	0	K(+) : H(+) antiporter KefB"	0	0	0	0	0	0	0	
+b3380	1	1	0	0	0	0	putative mutase YhfW"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b3388	1	0	0	7	0	0	cell division protein DamX"	0	0	0	0	0	0	0	
+b3409	3	0	1	1	0	1	Fe(2(+)) transporter FeoB"	0	0	0	0	0	0	 // Corrected Stop	
+b3411	3	0	1	4	0	1	recombination-promoting nuclease RpnA"	0	0	0	0	0	0	 // Corrected Stop	
+b3428	3	1	1	37	0	0	glycogen phosphorylase"	0	0	0	6	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b3442	2	0	1	0	0	1	putative endonuclease YhhZ"	0	0	0	0	0	0	 // Corrected Stop	
+b3492	2	0	1	1	0	0	putative oxidoreductase YhiN"	0	0	0	0	0	0	 // Corrected Stop	
+b3502	4	1	1	10	0	1	arsenite/antimonite:H(+) antiporter"	0	0	0	8	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b3508	3	1	1	1	0	0	inner membrane protein YhiD"	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b3518	1	0	0	8	0	0	cytochrome c peroxidase"	0	0	0	0	0	0	0	
+b3521	3	0	1	3	0	1	putative DNA-binding transcriptional regulator	0	0	0	0	0	0	 // Corrected Stop	
+b3549	1	0	0	1	0	0	3-methyl-adenine DNA glycosylase I, constitutive"	0	0	0	0	0	0	0	
+b3561	1	0	0	0	0	1	O-acetyltransferase WecH"	0	0	0	0	0	0	0	
+b3576	2	0	1	1	0	0	DUF386 domain-containing protein YiaL"	0	0	0	0	0	0	 // Corrected Stop	
+b3588	4	1	1	37	0	1	aldehyde dehydrogenase B"	0	0	0	7	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b3597	2	0	1	8	0	0	inner membrane protein YibH"	0	0	0	4	0	0	 // Corrected Stop	
+b3606	4	1	1	1	0	1	tRNA (cytidine/uridine-2'-O)-ribose	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b3621	1	0	1	0	0	0	ADP-heptose:LPS heptosyltransferase 1"	0	0	0	0	0	0	 // Corrected Stop	
+b3643	1	0	1	0	0	0	truncated RNase PH"	0	0	0	0	0	0	 // Corrected Stop	
+b3678	2	0	1	0	0	1	putative sulfatase/phosphatase YidJ"	0	0	0	0	0	0	 // Corrected Stop	
+b3680	2	0	1	2	0	0	putative DNA-binding transcriptional regulator	0	0	0	0	0	0	 // Corrected Stop	
+b3684	3	1	1	3	0	0	putative DNA-binding transcriptional regulator	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b3688	3	0	1	1	0	1	DUF1375 domain-containing putative lipoprotein	0	0	0	0	0	0	 // Corrected Stop	
+b3690	1	0	1	0	0	0	colicin M resistance protein"	0	0	0	0	0	0	 // Corrected Stop	
+b3721	3	0	1	1	0	1	6-phospho-beta-glucosidase B"	0	0	0	0	0	0	 // Corrected Stop	
+b3750	1	0	0	7	0	0	ribose ABC transporter membrane subunit"	0	0	0	0	0	0	0	
+b3772	1	0	0	0	0	1	threonine deaminase"	0	0	0	0	0	0	0	
+b3773	1	0	0	0	0	1	DNA-binding transcriptional dual regulator IlvY"	0	0	0	0	0	0	0	
+b3779	1	0	0	15	0	0	guanosine-5'-triphosphate,3'-diphosphate	0	0	0	0	0	0	0	
+b3787	1	0	0	23	0	0	UDP-N-acetyl-D-mannosamine dehydrogenase"	0	0	0	0	0	0	0	
+b3808	3	0	1	4	0	1	protein YzcX"	0	0	0	0	0	0	 // Corrected Stop	
+b3829	4	1	1	2	0	1	cobalamin-independent homocysteine	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b3830	2	0	1	1	0	0	putative dienelactone hydrolase"	0	0	0	0	0	0	 // Corrected Stop	
+b3831	1	0	1	0	0	0	uridine phosphorylase"	0	0	0	0	0	0	 // Corrected Stop	
+b3865	1	0	0	12	0	0	GTP-binding protein YihA"	0	0	0	0	0	0	0	
+b3870	2	0	1	0	0	1	glutamine synthetase"	0	0	0	0	0	0	 // Corrected Stop	
+b3894	1	0	0	1	0	0	formate dehydrogenase O subunit alpha"	0	0	0	0	0	0	0	
+b3896	4	1	1	23	0	1	DUF3829 domain-containing lipoprotein YiiG"	0	0	0	2	0	0	 // Modell shifted 2 base(s) // Corrected Start // Corrected Stop	
+b3901	2	1	1	0	0	0	L-rhamnose mutarotase"	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b3911	3	0	1	1	0	1	sensor histidine kinase CpxA"	0	0	0	0	0	0	 // Corrected Stop	
+b4016	2	0	1	1	0	0	isocitrate dehydrogenase kinase/phosphatase"	0	0	0	0	0	0	 // Corrected Stop	
+b4018	4	1	1	5	0	1	DNA-binding transcriptional repressor IclR"	0	0	0	4	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b4041	1	0	0	22	0	0	glycerol-3-phosphate 1-O-acyltransferase"	0	0	0	0	0	0	0	
+b4049	2	1	0	14	0	0	tRNA-dihydrouridine synthase A"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b4079	1	0	0	1	0	0	formate dehydrogenase H"	0	0	0	0	0	0	0	
+b4086	1	0	0	14	0	0	D-allose ABC transporter membrane subunit"	0	0	0	0	0	0	0	
+b4092	2	0	1	0	0	1	5-phospho-alpha-D-ribosyl 1,2-cyclic phosphate	0	0	0	0	0	0	 // Corrected Stop	
+b4121	1	0	1	0	0	0	DUF2238 domain-containing inner membrane protein	0	0	0	0	0	0	 // Corrected Stop	
+b4159	1	0	1	0	0	0	miniconductance mechanosensitive channel MscM"	0	0	0	0	0	0	 // Corrected Stop	
+b4200	2	1	0	9	0	0	30S ribosomal subunit protein S6"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start	
+b4216	1	0	1	0	0	0	PF09695 family protein YtfJ"	0	0	0	0	0	0	 // Corrected Stop	
+b4235	1	0	0	0	0	1	metalloprotease subunit TldE"	0	0	0	0	0	0	0	
+b4254	2	0	0	16	0	1	ornithine carbamoyltransferase ArgI"	0	0	0	0	0	0	0	
+b4268	2	1	0	12	0	0	D-gluconate kinase, thermosensitive"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start	
+b4278	2	0	1	2	0	0	IS4 family putative transposase"	0	0	0	0	0	0	 // Corrected Stop	
+b4321	2	0	1	19	0	0	fructuronate transporter"	0	0	0	18	0	0	 // Corrected Stop	
+b4353	1	1	0	0	0	0	PF04328 family protein YjiX"	0	0	0	0	0	0	 // Modell shifted 2 base(s) // Corrected Start	
+b4357	2	0	1	1	0	0	putative DNA-binding transcriptional regulator	0	0	0	0	0	0	 // Corrected Stop	
+b4371	3	0	1	1	0	1	16S rRNA m(2)G1207 methyltransferase"	0	0	0	0	0	0	 // Corrected Stop	
+b4391	2	0	1	12	0	0	energy-dependent translational throttle protein	0	0	0	0	0	0	 // Corrected Stop	
+b4394	1	0	1	0	0	0	inosine/xanthosine triphosphatase"	0	0	0	0	0	0	 // Corrected Stop	
+b4403	1	0	0	1	0	0	putative tRNA/rRNA methyltransferase YjtD"	0	0	0	0	0	0	0	
+b4476	4	1	1	24	0	1	low-affinity gluconate transporter"	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b4512	1	1	0	0	0	0	PF04328 family protein YbdD"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start	
+b4525	4	1	1	3	0	1	putative uncharacterized protein YmjC"	0	0	0	0	0	0	 // Modell shifted 1 base(s) // Corrected Start // Corrected Stop	
+b4534	1	0	1	0	0	0	protein YnfP"	0	0	0	0	0	0	 // Corrected Stop	
+b4541	3	0	1	7	0	1	uncharacterized protein YehK"	0	0	0	6	0	0	 // Corrected Stop	
+b4588	4	1	1	2	0	1	uncharacterized protein YlcH"	0	0	0	1	0	0	 // No unique shift for model found... MANUAL check // Corrected Start // Corrected Stop	
+b4612	3	1	1	1	0	0	uncharacterized protein YrhD"	0	0	0	0	0	0	 // Corrected Start // Corrected Stop	
+b4667	3	0	1	1	0	1	toxic peptide IbsA"	0	0	0	0	0	0	 // Corrected Stop	
+b4670	1	1	0	0	0	0	uncharacterized protein YjeV"	0	0	0	0	0	0	 // No unique shift for model found... MANUAL check // Corrected Start	
+b4672	3	0	1	1	0	1	putative protein YmiB"	0	0	0	0	0	0	 // Corrected Stop	
+b4673	1	0	1	0	0	0	uncharacterized protein YmjD"	0	0	0	0	0	0	 // Corrected Stop	
+b4679	2	0	1	4	0	0	putative membrane protein YohP"	0	0	0	2	0	0	 // Corrected Stop	
+b4723	1	1	0	0	0	0	protein YmcF"	0	0	0	0	0	0	 // Corrected Start	
+b4726	2	0	1	1	0	0	protein YabR"	0	0	0	0	0	0	 // Corrected Stop	
+b4732	2	0	1	1	0	0	protein YkiD"	0	0	0	0	0	0	 // Corrected Stop	
+b4739	1	0	1	0	0	0	protein YmgL"	0	0	0	0	0	0	 // Corrected Stop	
+b4740	3	1	1	1	0	0	protein YmgM"	0	0	0	0	0	0	 // No unique shift for model found... MANUAL check // Corrected Start // Corrected Stop	
+b4746	1	0	1	0	0	0	protein YddY"	0	0	0	0	0	0	 // Corrected Stop	
+b4747	1	1	0	0	0	0	protein YneP"	0	0	0	0	0	0	 // Corrected Start	
+b4755	2	0	1	0	0	1	protein YqhI"	0	0	0	0	0	0	 // Corrected Stop	
+b4779	3	0	1	1	0	1	protein YoaM"	0	0	0	0	0	0	 // Corrected Stop	
+b4791	3	0	1	2	0	1	protein YriA"	0	0	0	1	0	0	 // Corrected Stop	
+b4792	2	0	1	0	0	1	protein YriB"	0	0	0	0	0	0	 // Corrected Stop	
+b4802	1	1	0	0	0	0	protein YthB"	0	0	0	0	0	0	 // No unique shift for model found... MANUAL check // Corrected Start	
+b4819	2	0	1	1	0	0	protein YpeD"	0	0	0	0	0	0	 // Corrected Stop	
+b4824	1	1	0	0	0	0	protein YtjE"	1	1	0	0	0	0	0	

@@ -50,7 +50,13 @@ pna_data.head()
 # step 2: split the data into a training and test set
 # split the data into a training and test set
 X = pna_data.drop(["pna_name", "gene_name", "pna_sequence", "target_seq", "upec_locus_tag", "MIC_UPEC", "MIC_K12",
-                   "locus_tag", "mRNA_half_life", "gene_vulnerability_crispri", "expression_upec"], axis=1)
+                   "locus_tag", "mRNA_half_life", "gene_vulnerability_crispri", "expression_upec", "nr_pathways",
+                   "nr_genes_operon", "downstream_genes_operon", "essential_genes_downstream", "upstream_genes_operon",
+                   "essential_genes_upstream", "overlapping_genes", "string_interactions", "crispri_log2FC_rousset",
+                   "crispri_log2FC_a_baum", "cas13_log2FC", "protein_half_life_elife"], axis=1)
+# make sc bases relative to the length of the pna
+X["sc_bases"] = X["sc_bases"] / 9
+
 y = np.log2(pna_data["MIC_UPEC"])
 
 
@@ -276,8 +282,11 @@ scoring_metrics_names = ["within-1-tier accuracy", "R2 score", "Root mean square
                          "Recall (MIC <= 10)", "F1 score (MIC <= 10)", "Precision (MIC <= 5)", "Recall (MIC <= 5)",
                          "F1 score (MIC <= 5)"]
 
-# go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
-# adding a column with the model name
+
+
+#
+# # go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
+# # adding a column with the model name
 # df_results_all_metrics = pd.DataFrame()
 # for i in range(len(scoring_metrics)):
 #     print(scoring_metrics_names[i])
@@ -290,6 +299,10 @@ scoring_metrics_names = ["within-1-tier accuracy", "R2 score", "Root mean square
 #
 # # save the df_results_all_metrics as csv, so I do not have to run the above code again
 # df_results_all_metrics.to_csv("../data/mason_modeling/df_results_all_metrics.csv", index=False)
+
+
+
+
 
 # read in the df_results_all_metrics
 df_results_all_metrics = pd.read_csv("../data/mason_modeling/df_results_all_metrics.csv", header=0)
@@ -355,8 +368,11 @@ plt_all_metrics = plot_multiple_cv_runs(df_results_all_metrics, "10-fold cross v
 # step 3: feature selection
 # step 3.2: Check for feature importance in RF model with BorutaShap
 # define the model
-# rf = RandomForestRegressor()
-#
+
+
+
+rf = RandomForestRegressor()
+
 # # define BorutaShap feature selection method
 # feat_selector = BorutaShap(importance_measure="shap", classification=False)
 #
@@ -375,26 +391,22 @@ plt_all_metrics = plot_multiple_cv_runs(df_results_all_metrics, "10-fold cross v
 #    plt.axvline(i, color="grey", linestyle="--", linewidth=1, alpha=0.3)
 # # save the plot as svg
 # plt.savefig("../analysis/mason_modeling/feature_importances_boruta_shap.svg", bbox_inches='tight')
+
+
 # get the selected features
-selected_features = ['upec_tir_off_targets_2mm',
-                     'purine_percentage', 'Tm',
-                     'upec_tir_off_targets_1mm',
-                     'PNA_molecular_weight',
-                     'sc_bases',
-                     'C9',
-                     'CAI',
-                     'MFE_UPEC',
-                     'upec_total_off_targets_0mm',
-                     'upec_total_off_targets_1mm',
-                     'upec_total_off_targets_2mm',
-                     'upec_tir_off_targets_0mm']
+selected_features = ['Tm', 'sc_bases', 'PNA_molecular_weight', 'CAI', 'upec_tir_off_targets_1mm',
+                     'MFE_UPEC', 'purine_percentage']
 
 # now generate new X with only the selected features
 X_selected = X[selected_features]
 
-# now run 10 fold cv on the RF model with only the selected features
-# go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
-# adding a column with the model name
+
+
+
+
+# # now run 10 fold cv on the RF model with only the selected features
+# # go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
+# # adding a column with the model name
 # df_results_all_metrics_selected_features = pd.DataFrame()
 # for i in range(len(scoring_metrics)):
 #     print(scoring_metrics_names[i])
@@ -407,6 +419,10 @@ X_selected = X[selected_features]
 #
 # # save the df_results_all_metrics as csv, so I do not have to run the above code again
 # df_results_all_metrics_selected_features.to_csv("../data/mason_modeling/df_results_all_metrics_selected_features.csv", index=False)
+#
+
+
+
 
 
 # read in the df_results_all_metrics
@@ -430,6 +446,8 @@ plot_multiple_cv_runs(df_results_all_metrics_selected_features_pl,
 plot_multiple_cv_runs(df_results_all_metrics_selected_features,
                       "10-fold cross validation results raw models with selected features",
                       "10foldcv_results_all_metrics_selected_features_all_metrics")
+
+
 
 
 
@@ -561,6 +579,9 @@ best_params_list = []
 best_score_list = []
 best_model_list = []
 
+
+
+#
 # for i in range(len(models)):
 #     print(names_model[i])
 #     best_params, best_score, best_model, cv_results = grid_search_cv(models[i][1], param_grids[i],
@@ -583,20 +604,22 @@ best_model_list = []
 #     best_score_list.append(best_score)
 #     best_model_list.append(best_model)
 
+
+
+
 # write the best model list directly here:
-# [{'copy_X': True, 'fit_intercept': True, 'n_jobs': None, 'positive': False}, {'eps': 1e-05, 'max_iter': 500},
-# {'copy_X': True, 'fit_intercept': True, 'n_jobs': None, 'positive': False}, {'eps': 1e-05, 'max_iter': 500},
-# {'bootstrap': True, 'max_depth': 10, 'max_features': 1.0, 'min_samples_leaf': 1, 'min_samples_split': 5,
-# 'n_estimators': 100}, {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 0.9},
-# {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 300, 'subsample': 0.7},
-# {'learning_rate': 0.01, 'max_depth': 10, 'n_estimators': 200, 'subsample': 0.7}]
+# [LinearRegression(), LassoLarsCV(eps=1e-05), RandomForestRegressor(max_depth=40, max_features='sqrt', min_samples_leaf=2,
+#                       min_samples_split=5), XGBRegressor(max_depth=10, n_estimators=100),
+#                       GradientBoostingRegressor(learning_rate=0.2, max_depth=10, n_estimators=200,
+#                           subsample=0.7), LGBMRegressor(learning_rate=0.01, max_depth=10, subsample=0.7)]
 
-best_model_list = [LinearRegression(), LassoLarsCV(eps=1e-05),
-                   RandomForestRegressor(max_depth=10, min_samples_split=5),
-                   xgb.XGBRegressor(learning_rate=0.1, max_depth=10, n_estimators=100, subsample=0.9),
-                   GradientBoostingRegressor(max_depth=10, n_estimators=300, subsample=0.7),
-                   lgb.LGBMRegressor(learning_rate=0.01, max_depth=10, n_estimators=200, subsample=0.7)]
-
+best_model_list = [LinearRegression(), LassoLarsCV(eps=1e-05), RandomForestRegressor(max_depth=40, max_features='sqrt',
+                                                                                     min_samples_leaf=2, min_samples_split=5),
+                     xgb.XGBRegressor(max_depth=10, n_estimators=100), GradientBoostingRegressor(learning_rate=0.2,
+                                                                                                  max_depth=10,
+                                                                                                    n_estimators=200,
+                                                                                                    subsample=0.7),
+                        lgb.LGBMRegressor(learning_rate=0.01, max_depth=10, subsample=0.7)]
 
 
 # get scores of raw models
@@ -667,6 +690,9 @@ plt.savefig("../analysis/mason_modeling/10foldcv_results_raw_models_vs_optimized
 # ok now run the 10 fold cv on the optimized models and get the results, as I have done before
 # go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
 # adding a column with the model name
+
+
+
 # df_results_all_metrics_optimized_models = pd.DataFrame()
 # for i in range(len(scoring_metrics)):
 #    print(scoring_metrics_names[i])
@@ -678,6 +704,11 @@ plt.savefig("../analysis/mason_modeling/10foldcv_results_raw_models_vs_optimized
 #
 # # save the df_results_all_metrics as csv, so I do not have to run the above code again
 # df_results_all_metrics_optimized_models.to_csv("../data/mason_modeling/df_results_all_metrics_optimized_models.csv", index=False)
+
+
+
+
+
 
 # read in the df_results_all_metrics
 df_results_all_metrics_optimized_models = pd.read_csv("../data/mason_modeling/df_results_all_metrics_optimized_models.csv", header=0)
@@ -725,7 +756,7 @@ plt.savefig("../analysis/mason_modeling/10foldcv_results_optimized_models_1tier.
 
 # define the best performing model (RF!)
 # rf = RandomForestRegressor(bootstrap=False, max_depth=20, max_features='sqrt', min_samples_leaf=2)
-rf = RandomForestRegressor(max_depth=10, min_samples_split=5)
+rf = RandomForestRegressor(max_depth=40, max_features='sqrt', min_samples_leaf=2, min_samples_split=5)
 # fit the model
 rf.fit(X_selected, y)
 
@@ -738,6 +769,67 @@ pickle.dump(rf, open(filename, 'wb'))
 
 
 
+
+# create function plotting the shap values
+# use treeexplainer to explain the predictions of the XGBoost model using shap values etc.
+# use shap to explain the predictions and the feature importance of the model
+# write as function to generate the 2 shap plots with any model
+
+
+def plot_shap_values(model, X, y, file_name):
+    """
+    Function to plot the shap values of a model
+    :param model: model to use
+    :param X: X data
+    :param y: y data
+    :param file_name: name of the file to save the plot as
+    :return: plot of the shap values
+    """
+    # use shap to explain the predictions and the feature importance of the model
+    model_shap = shap.TreeExplainer(model).shap_values(X)
+    # plot the shap values
+    f = plt.figure(figsize=(4, 6))
+    # plot the shap values
+    shap.summary_plot(model_shap, X, plot_type="bar", show=False, max_display=9, color="#4682B4")  # , max_display=10,
+
+    # save the plot as svg
+    plt.savefig("../analysis/mason_modeling/" + file_name + "_summary_bar_mason.svg", dpi=1200)
+
+    # plot shap local values
+    # Define the colors for the colormap
+    colors = ['#4682B4', 'lightgray', '#B11226']  # Orange, Gray, Steel Blue
+    # Create a colormap using LinearSegmentedColormap
+    cmap = LinearSegmentedColormap.from_list('custom_cmap', colors, N=256)
+
+    f = plt.figure(figsize=(4, 6))
+    shap.summary_plot(
+        -model_shap, X, plot_type="dot", auto_size_plot=False, show=False, max_display=9  # , max_display=10
+    )
+    # Change the colormap of the artists
+    for fc in plt.gcf().get_children():
+        for fcc in fc.get_children():
+            if hasattr(fcc, "set_cmap"):
+                fcc.set_cmap(cmap)
+    # save the plot as svg
+    plt.savefig("../analysis/mason_modeling/" + file_name + "_summary_dot_mason.svg", dpi=1200)
+
+    return plt
+
+
+# plot the shap values
+plot_shap_values(rf, X_selected, y, "shap_values_rf_optimized_model")
+
+# get shap values for the optimized model
+shap_values = shap.TreeExplainer(rf).shap_values(X_selected)
+
+# make shap values into a dataframe
+shap_values_df = pd.DataFrame(shap_values, columns=X_selected.columns)
+
+# save them as csv
+shap_values_df.to_csv("../data/mason_modeling/shap_values_rf_optimized_model.csv", index=False)
+
+# save the raw X data as csv
+X_selected.to_csv("../data/mason_modeling/X_selected.csv", index=False)
 
 
 

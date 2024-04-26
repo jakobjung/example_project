@@ -22,7 +22,10 @@ import seaborn as sns
 
 import shap
 import xgboost as xgb
+# import pickle:
+import pickle
 
+from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.metrics import make_scorer
 # import GradientBoostingRegressor
 from sklearn.ensemble import GradientBoostingRegressor
@@ -56,8 +59,6 @@ X = pna_data.drop(["pna_name", "gene_name", "pna_sequence", "target_seq", "upec_
                    "locus_tag"],
                   axis=1)
 y = np.log2(pna_data["MIC_UPEC"])
-
-
 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -98,7 +99,6 @@ def plot_mic_distribution(y_train, y_test, plot_name, file_name):
     ax.set_title(plot_name)
     # save the plot as svg
     plt.savefig("../analysis/" + file_name + ".svg")
-
 
 
 # make a bar plot showing the distribution of the MIC values in the training and test set next to one another. MIC
@@ -289,6 +289,7 @@ def within_5_f1(y_true, y_pred):
 # do same for within 5
 within_5_f1_score = make_scorer(within_5_f1)
 
+
 # Now create multiple models and evaluate them using cross validation. Use Linear regression, Lassolars, SVR, random forest,
 # XGBoost, GradientBoostingRegressor, LightGBM
 # define the models
@@ -300,7 +301,11 @@ models.append(('XGB', xgb.XGBRegressor()))
 models.append(('GBoost', GradientBoostingRegressor()))
 models.append(('LightGBM', lgb.LGBMRegressor()))
 
-names_model = ["Linear regression", "LassoLarsCV", "Random forest", "XGBoost", "GradientBoostingRegressor", "LightGBM"]
+
+
+
+names_model = ["Linear regression", "LassoLarsCV", "Random forest", "XGBoost", "GBoost", "LightGBM",
+               "SVR", "GPR"]
 
 
 # create function running multiple models cv and returning the results
@@ -338,8 +343,17 @@ scoring_metrics_names = ["within-1-tier accuracy", "R2 score", "Root mean square
                          "Recall (MIC <= 10)", "F1 score (MIC <= 10)", "Precision (MIC <= 5)", "Recall (MIC <= 5)",
                          "F1 score (MIC <= 5)"]
 
+# predict the MIC values using RF
+# train rf model pn training set
+rf = RandomForestRegressor()
+rf.fit(X_train, y_train)
+# make predictions on the test set
+y_pred_rf = rf.predict(X_test)
+
+
+
 # go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
-# adding a column with the model name
+# # adding a column with the model name
 # df_results_all_metrics = pd.DataFrame()
 # for i in range(len(scoring_metrics)):
 #     print(scoring_metrics_names[i])
@@ -353,6 +367,13 @@ scoring_metrics_names = ["within-1-tier accuracy", "R2 score", "Root mean square
 # # save the df_results_all_metrics as csv, so I do not have to run the above code again
 # df_results_all_metrics.to_csv("../data/df_results_all_metrics.csv", index=False)
 
+
+
+
+
+
+
+
 # read in the df_results_all_metrics
 df_results_all_metrics = pd.read_csv("../data/df_results_all_metrics.csv", header=0)
 
@@ -360,9 +381,9 @@ df_results_all_metrics = pd.read_csv("../data/df_results_all_metrics.csv", heade
 # create a function of boxplot of the results, add points
 
 
-def plot_multiple_cv_runs(df_results, plot_name, file_name):
+def plot_multiple_cv_runs(df_results, plot_name, file_name, location="lower left", width=20, height=6):
     # change the style of the plot
-    plt.figure(figsize=(20, 6))
+    plt.figure(figsize=(width, height))
     # create a color palette. use the inferno palette, but reverse it
     cmap = plt.get_cmap('viridis', 512)
     c1 = matplotlib.colors.to_hex(cmap(1 / 6))
@@ -391,7 +412,7 @@ def plot_multiple_cv_runs(df_results, plot_name, file_name):
     # add title
     plt.title(plot_name, fontsize=16, fontweight="bold", pad=20)
     # add legend bottom left
-    plt.legend(loc='lower left', fontsize=14)
+    plt.legend(loc=location, fontsize=14)
     # save the plot as svg
     plt.rcParams['savefig.facecolor'] = 'white'
     plt.savefig("../analysis/" + file_name + ".svg", bbox_inches='tight')
@@ -401,23 +422,26 @@ def plot_multiple_cv_runs(df_results, plot_name, file_name):
 
 # drop recall mic <= 5 from df_results_all_metrics
 df_results_all_metrics_pl = df_results_all_metrics[df_results_all_metrics["scoring_metric"] != "Recall (MIC <= 5)"]
+# also drop f1 score mic <= 5
+df_results_all_metrics_pl = df_results_all_metrics_pl[df_results_all_metrics_pl["scoring_metric"] != "F1 score (MIC <= 5)"]
+# also drop precision <= 5
+df_results_all_metrics_pl = df_results_all_metrics_pl[df_results_all_metrics_pl["scoring_metric"] != "Precision (MIC <= 5)"]
 # also drop r2 score
 df_results_all_metrics_pl = df_results_all_metrics_pl[df_results_all_metrics_pl["scoring_metric"] != "R2 score"]
-# also drop f1 score mic <= 5
-df_results_all_metrics_pl = df_results_all_metrics_pl[
-    df_results_all_metrics_pl["scoring_metric"] != "F1 score (MIC <= 5)"]
+
 
 # plot the results
 plt_1tier = plot_multiple_cv_runs(df_results_all_metrics_pl, "10-fold cross validation results raw models",
-                                  "10foldcv_results_all_metrics_raw_models")
+                                  "10foldcv_results_all_metrics_raw_models", width=15, height=6, location="upper left")
 # plot all metrics
 plt_all_metrics = plot_multiple_cv_runs(df_results_all_metrics, "10-fold cross validation results raw models",
                                         "10foldcv_results_all_metrics_raw_models_all_metrics")
 
+
 # step 3.2: Check for feature importance in RF model with BorutaShap
 # define the model
-# rf = RandomForestRegressor()
-#
+rf = RandomForestRegressor()
+
 # # define BorutaShap feature selection method
 # feat_selector = BorutaShap(importance_measure="shap", classification=False)
 #
@@ -439,12 +463,16 @@ plt_all_metrics = plot_multiple_cv_runs(df_results_all_metrics, "10-fold cross v
 
 # get the selected features
 selected_features = ['upec_tir_off_targets_2mm',
-                     'purine_percentage', 'Tm',
+                     'purine_percentage',
+                     'Tm',
                      'upec_tir_off_targets_1mm',
                      'sc_bases',
-                     'gene_vulnerability_crispri',
+                     #'gene_vulnerability_crispri',
+                     'string_interactions',
+                     #'crispri_log2FC_rousset',
+                     'cas13_log2FC',
+                     'PNA_molecular_weight',
                      'expression_upec',
-                     'CAI',
                      'MFE_UPEC',
                      'upec_total_off_targets_0mm',
                      'upec_total_off_targets_1mm',
@@ -453,6 +481,10 @@ selected_features = ['upec_tir_off_targets_2mm',
 
 # now generate new X with only the selected features
 X_selected = X[selected_features]
+
+
+
+
 
 # # now run 10 fold cv on the RF model with only the selected features
 # # go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
@@ -471,6 +503,11 @@ X_selected = X[selected_features]
 # df_results_all_metrics_selected_features.to_csv("../data/df_results_all_metrics_selected_features.csv", index=False)
 
 
+
+
+
+
+
 # read in the df_results_all_metrics
 df_results_all_metrics_selected_features = pd.read_csv("../data/df_results_all_metrics_selected_features.csv", header=0)
 
@@ -484,10 +521,15 @@ df_results_all_metrics_selected_features_pl = df_results_all_metrics_selected_fe
 # also drop f1 score mic <= 5
 df_results_all_metrics_selected_features_pl = df_results_all_metrics_selected_features_pl[
     df_results_all_metrics_selected_features_pl["scoring_metric"] != "F1 score (MIC <= 5)"]
+# also drop precision <= 5
+df_results_all_metrics_selected_features_pl = df_results_all_metrics_selected_features_pl[
+    df_results_all_metrics_selected_features_pl["scoring_metric"] != "Precision (MIC <= 5)"]
+
+
 # plot the results
 plot_multiple_cv_runs(df_results_all_metrics_selected_features_pl,
                       "10-fold cross validation results raw models with selected features",
-                      "10foldcv_results_all_metrics_selected_features")
+                      "10foldcv_results_all_metrics_selected_features", width=15, height=6, location="upper left")
 
 plot_multiple_cv_runs(df_results_all_metrics_selected_features,
                       "10-fold cross validation results raw models with selected features",
@@ -553,10 +595,6 @@ param_grid_lgb = {
     'subsample': [0.7, 0.8, 0.9]
 }
 
-# run grid search for all models
-# import GridSearchCV
-from sklearn.model_selection import GridSearchCV
-
 
 # define the grid search function
 def grid_search_cv(model, param_grid, X_train, y_train, cv_splits, num_runs, cv_metric=within_1_dil_scorer):
@@ -616,10 +654,15 @@ def compare_optimized_non_optimized_model(model_1, model_2):
 # use the parameter grids and put them into a list
 param_grids = [param_grid_lr, param_grid_lasso, param_grid_rf, param_grid_xgb, param_grid_gboost, param_grid_lgb]
 
-# run the grid search for all models
-best_params_list = []
-best_score_list = []
-best_model_list = []
+
+
+
+
+
+# # run the grid search for all models
+# best_params_list = []
+# best_score_list = []
+# best_model_list = []
 
 # for i in range(len(models)):
 #     print(names_model[i])
@@ -642,36 +685,37 @@ best_model_list = []
 #     best_params_list.append(best_params)
 #     best_score_list.append(best_score)
 #     best_model_list.append(best_model)
+#
+#
+
+
+
+
+
 
 # write the best model list directly here:
-# [LinearRegression(), LassoLarsCV(eps=1e-05), RandomForestRegressor(max_depth=30, min_samples_leaf=2, min_samples_split=5,
-#                       n_estimators=200), XGBRegressor(base_score=None, booster=None, callbacks=None,
+# [LinearRegression(), LassoLarsCV(eps=1e-05, normalize=True), RandomForestRegressor(bootstrap=False, max_depth=20, max_features='sqrt',
+#                       min_samples_leaf=2), RandomForestRegressor(random_state=42), XGBRegressor(base_score=None, booster=None, callbacks=None,
 #              colsample_bylevel=None, colsample_bynode=None,
-#              colsample_bytree=None, early_stopping_rounds=None,
+#              colsample_bytree=0.8, early_stopping_rounds=None,
 #              enable_categorical=False, eval_metric=None, feature_types=None,
 #              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
 #              interaction_constraints=None, learning_rate=0.1, max_bin=None,
 #              max_cat_threshold=None, max_cat_to_onehot=None,
-#              max_delta_step=None, max_depth=10, max_leaves=None,
+#              max_delta_step=None, max_depth=30, max_leaves=None,
 #              min_child_weight=None, missing=nan, monotone_constraints=None,
-#              n_estimators=200, n_jobs=None, num_parallel_tree=None,
-#              predictor=None, random_state=None, ...),
-#              GradientBoostingRegressor(max_depth=10, n_estimators=300, subsample=0.9),
-#              LGBMRegressor(learning_rate=0.01, max_depth=10, n_estimators=300, subsample=0.7)]
+#              n_estimators=100, n_jobs=None, num_parallel_tree=None,
+#              predictor=None, random_state=None, ...), GradientBoostingRegressor(max_depth=20, n_estimators=300, subsample=0.8), LGBMRegressor(learning_rate=0.01, max_depth=10, n_estimators=300, subsample=0.7)]
 
 best_model_list = [LinearRegression(), LassoLarsCV(eps=1e-05, normalize=True),
-                   RandomForestRegressor(max_depth=30, min_samples_leaf=2, min_samples_split=5, n_estimators=200),
-                   xgb.XGBRegressor(max_depth=10, n_estimators=200, learning_rate=0.1, subsample=0.9),
-                   GradientBoostingRegressor(max_depth=10, n_estimators=300, subsample=0.9),
-                   lgb.LGBMRegressor(learning_rate=0.01, max_depth=10, n_estimators=300, subsample=0.7)]
+                     RandomForestRegressor(bootstrap=False, max_depth=20, max_features='sqrt', min_samples_leaf=2),
+                  # RandomForestRegressor(random_state=42),
+                        xgb.XGBRegressor(max_depth=30, n_estimators=100, learning_rate=0.1, subsample=0.9),
+                        GradientBoostingRegressor(max_depth=20, n_estimators=300, subsample=0.8),
+                        lgb.LGBMRegressor(learning_rate=0.01, max_depth=10, n_estimators=300, subsample=0.7)]
 
 
-# best_model_list = [LinearRegression(), LassoLarsCV(eps=1e-05, normalize=True),
-#                    RandomForestRegressor(bootstrap=False, max_depth=20, max_features='sqrt', min_samples_leaf=2),
-#                    xgb.XGBRegressor(colsample_bytree=0.8, learning_rate=0.1, max_depth=30, n_estimators=100,
-#                                     subsample=0.9),
-#                    GradientBoostingRegressor(max_depth=20, n_estimators=300, subsample=0.8),
-#                    lgb.LGBMRegressor(learning_rate=0.01, max_depth=10, n_estimators=300, subsample=0.7)]
+
 best_score_list = [0.7633333333333334, 0.7611111111111111, 0.7988383838383839, 0.7764141414141414, 0.7921717171717171,
                    0.7853535353535354]
 
@@ -738,20 +782,37 @@ plt.xticks(rotation=45, ha="right")
 plt.rcParams['savefig.facecolor'] = 'white'
 plt.savefig("../analysis/10foldcv_results_raw_models_vs_optimized_models.svg", bbox_inches='tight')
 
-# ok now run the 10 fold cv on the optimized models and get the results, as I have done before
-# go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
-# adding a column with the model name
+
+
+
+
+
+
+
+# # ok now run the 10 fold cv on the optimized models and get the results, as I have done before
+# # go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
+# # adding a column with the model name
 # df_results_all_metrics_optimized_models = pd.DataFrame()
 # for i in range(len(scoring_metrics)):
-#    print(scoring_metrics_names[i])
-#    df_results = run_multiple_cv_runs(best_model_list, names_model, X_selected, y, 10, 10,
+#     print(scoring_metrics_names[i])
+#     df_results = run_multiple_cv_runs(best_model_list, names_model, X_selected, y, 10, 10,
 #                                                        cv_metric=scoring_metrics[i])
-#    df_results["scoring_metric"] = scoring_metrics_names[i]
-# # add to df_results_all_metrics
-#    df_results_all_metrics_optimized_models = pd.concat([df_results_all_metrics_optimized_models, df_results])
+#     df_results["scoring_metric"] = scoring_metrics_names[i]
+#     # add to df_results_all_metrics
+#     df_results_all_metrics_optimized_models = pd.concat([df_results_all_metrics_optimized_models, df_results])
 #
 # # save the df_results_all_metrics as csv, so I do not have to run the above code again
 # df_results_all_metrics_optimized_models.to_csv("../data/df_results_all_metrics_optimized_models.csv", index=False)
+
+
+
+
+
+
+
+
+
+
 
 # read in the df_results_all_metrics
 df_results_all_metrics_optimized_models = pd.read_csv("../data/df_results_all_metrics_optimized_models.csv", header=0)
@@ -763,9 +824,17 @@ df_results_all_metrics_optimized_models_pl = df_results_all_metrics_optimized_mo
 # also drop r2 score
 df_results_all_metrics_optimized_models_pl = df_results_all_metrics_optimized_models_pl[
     df_results_all_metrics_optimized_models_pl["scoring_metric"] != "R2 score"]
+# also drop f1 score mic <= 5
+df_results_all_metrics_optimized_models_pl = df_results_all_metrics_optimized_models_pl[
+    df_results_all_metrics_optimized_models_pl["scoring_metric"] != "F1 score (MIC <= 5)"]
+# also drop precision <= 5
+df_results_all_metrics_optimized_models_pl = df_results_all_metrics_optimized_models_pl[
+    df_results_all_metrics_optimized_models_pl["scoring_metric"] != "Precision (MIC <= 5)"]
+
+
 # plot the results
 plot_multiple_cv_runs(df_results_all_metrics_optimized_models_pl, "10-fold cross validation results optimized models",
-                      "10foldcv_results_all_metrics_optimized_models")
+                      "10foldcv_results_all_metrics_optimized_models", width=15, height=6, location="upper left")
 plot_multiple_cv_runs(df_results_all_metrics_optimized_models, "10-fold cross validation results optimized models",
                       "10foldcv_results_all_metrics_optimized_models_all_metrics")
 
@@ -789,71 +858,84 @@ plt.xlabel("")
 plt.rcParams['savefig.facecolor'] = 'white'
 # make x axis labels rotate
 plt.xticks(rotation=45, ha="right")
+# make y limits 0.73-0.79
+plt.ylim(0.73, 0.79)
 # select ticks on y axis
-plt.yticks(np.arange(0.73, 0.78, 0.01))
+plt.yticks(np.arange(0.73, 0.79, 0.01))
 plt.savefig("../analysis/10foldcv_results_optimized_models_1tier.svg", bbox_inches='tight')
 
 
-# # now use hyperopt to do hyperparameter tuning for the random forest model, using cross validation for every run!
-# # define function to maximize for hyperopt (minimize MSE)
-# def rf_mse_cv(params, random_state=42, cv=10, X=X_selected, y=y):
-#     """
-#     Function to optimize the random forest model using hyperopt
-#     :param params: parameters to optimize
-#     :param random_state: random state
-#     :param cv: number of cross validation splits
-#     :return: mean squared error
-#     """
-#     # set the parameters
-#     params = {'n_estimators': params['n_estimators'],
-#               'max_features': params['max_features'],
-#               'max_depth': params['max_depth'],
-#               'min_samples_split': params['min_samples_split'],
-#               'min_samples_leaf': params['min_samples_leaf'],
-#               'bootstrap': params['bootstrap']}
-#     # define the model
-#     model = RandomForestRegressor(random_state=random_state, **params)
-#     # define the cross validation
-#     kf = KFold(n_splits=cv, shuffle=True, random_state=random_state)
-#     # calculate the scores
-#     scores = cross_val_score(model, X, y, cv=kf, scoring=rmse_scorer)
-#     # return the mean of the scores
-#     return np.mean(scores)
-#
-#
-# # define the parameter space
-# param_space = {
-#     "n_estimators": hp.choice('n_estimators', np.arange(50, 500)),
-#     "max_features": hp.choice("max_features", ["log2", "sqrt"] + list(np.arange(0.1, 1, 0.1))),
-#     # max depth, has to be an integer
-#     "max_depth": hp.choice('max_depth', np.arange(2, 21)),
-#     "min_samples_split": hp.uniform("min_samples_split", 0, 1),
-#     "min_samples_leaf": hp.choice('min_samples_leaf', np.arange(1, 10)),
-#     "bootstrap": hp.choice("bootstrap", [True, False])
-# }
-#
-# # ok, now split data into 10 folds, run hyperopt on each fold, test model on test set for within 1 dilution accuracy
-# # define the number of folds
-# cv_splits = 10
-# # define the number of runs
-# num_runs = 50
-# # define the random state
-# random_state = 42
-# # define the number of iterations
-# n_iter = 50
-# # define the list to store the scores
-# scores = []
-# # define the list to store the models
-# models = []
-# # define the list to store the best parameters
-# best_params = []
-# # define the list to store the best scores
-# best_scores = []
-# # define the list to store the best models
-# best_models = []
-#
-# # define the cross validation
-# kf = KFold(n_splits=cv_splits, shuffle=True, random_state=random_state)
+
+
+
+# now use hyperopt to do hyperparameter tuning for the random forest model, using cross validation for every run!
+# define function to maximize for hyperopt (minimize MSE)
+def rf_mse_cv(params, random_state=42, cv=10, X=X_selected, y=y):
+    """
+    Function to optimize the random forest model using hyperopt
+    :param params: parameters to optimize
+    :param random_state: random state
+    :param cv: number of cross validation splits
+    :return: mean squared error
+    """
+    # set the parameters
+    params = {'n_estimators': params['n_estimators'],
+              'max_features': params['max_features'],
+              'max_depth': params['max_depth'],
+              'min_samples_split': params['min_samples_split'],
+              'min_samples_leaf': params['min_samples_leaf'],
+              'bootstrap': params['bootstrap']}
+    # define the model
+    model = RandomForestRegressor(random_state=random_state, **params)
+    # define the cross validation
+    kf = KFold(n_splits=cv, shuffle=True, random_state=random_state)
+    # calculate the scores
+    scores = cross_val_score(model, X, y, cv=kf, scoring=rmse_scorer)
+    # return the mean of the scores
+    return np.mean(scores)
+
+
+# define the parameter space
+param_space = {
+    "n_estimators": hp.choice('n_estimators', np.arange(50, 500)),
+    "max_features": hp.choice("max_features", ["log2", "sqrt"] + list(np.arange(0.1, 1, 0.1))),
+    # max depth, has to be an integer
+    "max_depth": hp.choice('max_depth', np.arange(2, 21)),
+    "min_samples_split": hp.uniform("min_samples_split", 0, 1),
+    "min_samples_leaf": hp.choice('min_samples_leaf', np.arange(1, 10)),
+    "bootstrap": hp.choice("bootstrap", [True, False])
+}
+
+# ok, now split data into 10 folds, run hyperopt on each fold, test model on test set for within 1 dilution accuracy
+# define the number of folds
+cv_splits = 10
+# define the number of runs
+num_runs = 50
+# define the random state
+random_state = 42
+# define the number of iterations
+n_iter = 50
+# define the list to store the scores
+scores = []
+# define the list to store the models
+models = []
+# define the list to store the best parameters
+best_params = []
+# define the list to store the best scores
+best_scores = []
+# define the list to store the best models
+best_models = []
+
+# define the cross validation
+kf = KFold(n_splits=cv_splits, shuffle=True, random_state=random_state)
+
+
+
+
+
+
+
+
 #
 # # # go through all folds
 # for train_index, test_index in kf.split(X_selected):
@@ -913,20 +995,34 @@ plt.savefig("../analysis/10foldcv_results_optimized_models_1tier.svg", bbox_inch
 # # select only the features(keys) that are keys of param_space
 # tuned_params = {key: value for key, value in tuned_params.items() if key in param_space.keys()}
 
+
+
+
+
+
+
+
 # bbased on this, select the best parameters for each parameter based on most chosen or median
-# parameters:  {'bootstrap': [True, False, False, False, True, False, True, True, True, False], 'max_depth':
-# [15, 18, 17, 11, 17, 14, 15, 19, 9, 4], 'max_features': [0.7000000000000001, 'log2', 0.4, 'sqrt', 0.7000000000000001,
-# 0.30000000000000004, 0.9, 0.8, 0.6, 0.6], 'min_samples_leaf': [4, 3, 3, 2, 1, 4, 3, 4, 1, 2], 'min_samples_split':
-# [0.049733238816556995, 0.05918135422633558, 0.0004653138021376707, 0.0028745605596724316, 0.0008082034719428463,
-# 0.005065177289142853, 0.0005991064303567512, 0.0009375160436033564, 0.055860247305293376, 0.015525549283968872],
-# 'n_estimators': [292, 230, 289, 409, 272, 250, 448, 389, 460, 300]}
-# rf_hyprt_tuned = RandomForestRegressor(bootstrap=True, max_depth=15, max_features="sqrt", min_samples_leaf=3,
-#                                         min_samples_split=0.0028745605596724316, n_estimators=296, random_state=42)
-# #rf_hyper_tuned = RandomForestRegressor(bootstrap=True, max_depth=12, max_features="log2", min_samples_leaf=2,
-# #                                       min_samples_split=0.0265, n_estimators=353, random_state=42)
-#
-# rf_raw = RandomForestRegressor(random_state=42)
-#
+# parameters: {'bootstrap': [True, True, False, False, True, False, True, True, True, False],
+# 'max_depth': [19, 10, 18, 17, 14, 17, 18, 14, 19, 16],
+# 'max_features': [0.5, 0.30000000000000004, 0.5, 0.4, 0.7000000000000001, 'sqrt', 'sqrt', 0.7000000000000001, 'log2', 'sqrt'],
+# 'min_samples_leaf': [4, 2, 1, 4, 6, 1, 2, 1, 1, 2],
+# 'min_samples_split': [0.0020473307177855185, 0.0008738167622188075, 0.1173523294096549, 0.07464349184488561, 0.016262859765258104, 0.00792970153040256, 0.002372538526031177, 0.0037851064565116166, 0.017569201296589454, 0.004403612089165811],
+# 'n_estimators': [428, 200, 308, 190, 407, 477, 178, 386, 451, 297]}
+
+rf_hyper_tuned = RandomForestRegressor(bootstrap=True, max_depth=17, max_features="sqrt", min_samples_leaf=2,
+                                       min_samples_split=0.006166656809784185, n_estimators=347, random_state=42)
+
+
+rf_raw = RandomForestRegressor(random_state=42)
+
+
+
+
+
+
+
+
 # # ok now run the 10 fold cv on the optimized models, including this one, as I have done before
 # # go through all metrics and run 10 fold cv on all models with that metric. then put dfs into one dataframe,
 # # adding a column with the model name
@@ -945,6 +1041,11 @@ plt.savefig("../analysis/10foldcv_results_optimized_models_1tier.svg", bbox_inch
 # # save the df_results_all_metrics as csv, so I do not have to run the above code again
 # df_results_all_metrics_optimized_model.to_csv("../data/df_results_all_metrics_RF_optimized.csv", index=False)
 
+
+
+
+
+
 # read in the df_results_all_metrics
 df_results_all_metrics_optimized_model = pd.read_csv("../data/df_results_all_metrics_RF_optimized.csv", header=0)
 
@@ -954,9 +1055,15 @@ df_results_all_metrics_optimized_model_pl = df_results_all_metrics_optimized_mod
 # also drop r2 score
 df_results_all_metrics_optimized_model_pl = df_results_all_metrics_optimized_model_pl[
     df_results_all_metrics_optimized_model_pl["scoring_metric"] != "R2 score"]
+# also drop f1 score mic <= 5
+df_results_all_metrics_optimized_model_pl = df_results_all_metrics_optimized_model_pl[
+    df_results_all_metrics_optimized_model_pl["scoring_metric"] != "F1 score (MIC <= 5)"]
+
 # plot the results
-plot_multiple_cv_runs(df_results_all_metrics_optimized_model, "10-fold cross validation results optimized RF",
-                        "10foldcv_results_all_metrics_RF")
+plot_multiple_cv_runs(df_results_all_metrics_optimized_model_pl, "10-fold cross validation results optimized RF",
+                      "10foldcv_results_all_metrics_RF", width=15, height=6, location="upper left")
+
+
 
 
 # step 3.4: check feature importance of the optimized models. use the RF model and run Shap analysis on it:
@@ -965,6 +1072,11 @@ rf = RandomForestRegressor(bootstrap=False, max_depth=20, max_features='sqrt', m
 
 # fit the model
 rf.fit(X_selected, y)
+
+# save the trained random forest model as pickle file
+# save the model to disk
+filename = '../data/models_trained/rf_optimized_model.sav'
+pickle.dump(rf, open(filename, 'wb'))
 
 
 # create function plotting the shap values
@@ -1041,14 +1153,14 @@ colors = ['#4682B4', 'lightgray', '#B11226']  # Orange, Gray, Steel Blue
 cmap = LinearSegmentedColormap.from_list('custom_cmap', colors, N=256)
 
 plt.figure(figsize=(6, 6))
-shap.dependence_plot("gene_vulnerability_crispri", shap_values, X_selected, interaction_index="expression_upec",
+shap.dependence_plot("cas13_log2FC", shap_values, X_selected, interaction_index="expression_upec",
                      cmap=cmap)
 # save the plot as svg
 plt.savefig("../analysis/shap_dependence_plot_rf_optimized_model.svg", dpi=1200)
 
 # create another dependence plot , the other way around
 plt.figure(figsize=(6, 6))
-shap.dependence_plot("expression_upec", shap_values, X_selected, interaction_index="gene_vulnerability_crispri",
+shap.dependence_plot("expression_upec", shap_values, X_selected, interaction_index="cas13_log2FC",
                      cmap=cmap)
 # save the plot as svg
 plt.savefig("../analysis/shap_dependence_plot_rf_optimized_model_2.svg", dpi=1200)
@@ -1063,7 +1175,8 @@ tiling_pna_data.head()
 tiling_pna_data.columns
 # get X_test and y_test
 X_test = tiling_pna_data.drop(['MIC', 'pna_name', 'pna_name_full', 'pna_sequence', 'concentration',
-                               'gene_name', 'PNA_molecular_weight'], axis=1)
+                               'gene_name'#, 'PNA_molecular_weight'
+                               ], axis=1)
 # put X_test in same order as X_imp
 X_test = X_test[selected_features]
 y_test = np.log2(tiling_pna_data["MIC"])
@@ -1185,7 +1298,7 @@ def fit_models_predict_test_set(models, model_names, X_imp, X_test, y, y_test):
         # add the predicted y values to the y_preds list
         y_preds.append(y_pred)
     # remove last plot (8th plot)
-    fig.delaxes(axs[7])
+    #fig.delaxes(axs[7])
     # add a title to the entire plot
     fig.suptitle("Predicted vs. tested MIC values", fontsize=20, fontweight="bold", y=1.05)
     # add a legend to the plot
@@ -1198,6 +1311,8 @@ def fit_models_predict_test_set(models, model_names, X_imp, X_test, y, y_test):
 
 best_model_list = [LinearRegression(), LassoLarsCV(eps=1e-05, normalize=True),
                     RandomForestRegressor(bootstrap=False, max_depth=20, max_features='sqrt', min_samples_leaf=2),
+                    RandomForestRegressor(bootstrap=True, max_depth=17, max_features="sqrt", min_samples_leaf=2,
+                                       min_samples_split=0.006166656809784185, n_estimators=347, random_state=42),
                     RandomForestRegressor(random_state=42),
                     xgb.XGBRegressor(colsample_bytree=0.8, learning_rate=0.1, max_depth=30, n_estimators=100,
                                     subsample=0.9),
@@ -1207,7 +1322,8 @@ best_model_list = [LinearRegression(), LassoLarsCV(eps=1e-05, normalize=True),
 # make columns of X_test same order as X_selected
 X_test = X_test[selected_features]
 X_selected = X_selected[selected_features]
-names_model = ["Linear regression", "LassoLarsCV", "Random forest", "Random forest raw", "XGBoost", "GradientBoostingRegressor", "LightGBM"]
+names_model = ["Linear regression", "LassoLarsCV", "Random forest grid", "Random forest hyperopt", "Random forest raw",
+               "XGBoost", "GradientBoostingRegressor", "LightGBM"]
 # run function on all models
 y_pred_tpot_rf = fit_models_predict_test_set(best_model_list, names_model, X_selected, X_test, y, y_test)
 
@@ -1222,12 +1338,12 @@ y_pred = rf.predict(X_test)
 
 # make a table with pna names, gene names, pna sequences, predicted MIC values and actual MIC values
 # create a dataframe with the predicted and actual MIC values
-df_predicted_mic = pd.DataFrame({"pna_name": tiling_pna_data["pna_name"],
+df_predicted_mic_RF = pd.DataFrame({"pna_name": tiling_pna_data["pna_name"],
                                     "gene_name": tiling_pna_data["gene_name"],
                                     "pna_sequence": tiling_pna_data["pna_sequence"],
                                     "predicted_mic": np.exp2(y_pred), "actual_mic": np.exp2(y_test)})
 # print the dataframe
-print(df_predicted_mic)
+print(df_predicted_mic_RF)
 
 
 # do same with tiling data with pure PNAS:
@@ -1241,7 +1357,8 @@ tiling_pna_data_pure = tiling_pna_data_pure.drop("RF_mean_cellsytems", axis=1)
 tiling_pna_data_pure.columns
 # get X_test and y_test
 X_test_pure = tiling_pna_data_pure.drop(['MIC', 'pna_name', 'pna_name_full', 'pna_sequence', 'concentration',
-                                 'gene_name', 'PNA_molecular_weight'], axis=1)
+                                 'gene_name'#, 'PNA_molecular_weight'
+                                         ], axis=1)
 # put X_test in same order as X_imp
 X_test_pure = X_test_pure[selected_features]
 y_test_pure = np.log2(tiling_pna_data_pure["MIC"])

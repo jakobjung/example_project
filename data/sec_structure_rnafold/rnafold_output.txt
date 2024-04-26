@@ -1,0 +1,861 @@
+>ECP_0023
+UCGGACGAUUUUCACUGUUUUGAGCCAGACAUGAAGCUGAUACGCGGCAUACAUAAUCUCA
+..........((((.(((((......)))))))))((((.....))))............. ( -8.10)
+>ECP_0024
+AUCAAACCGAAAUACGGAACCGAGAAUCUGAUGAGUGACUAUAAAUCAACCCUGAAUUUGC
+......(((.....)))...........((((............))))............. ( -3.10)
+>ECP_0025
+CGGUGACGGUGAAAAACGUAAGUUUGCCUGAUGAGUCAAUCGAUCUGUUCAACAGGGCUAC
+.....(((........))).......((((.((((.((.......)))))).))))..... (-10.30)
+>ECP_0027
+UGGAAAUCGAUCCGGCACUGGAGGCGUAACAUGCAGAUCCUGUUGGCCAACCCGCGUGGUU
+((((......)))).((((((.(((.(((((.........))))))))...))).)))... (-13.80)
+>ECP_0029
+GUCUAUGCAAAUUAACAAAAGAGAAUAGCUAUGCAUGAUGCAAACAUCCGCGUUGCCAUCG
+...........................((.((((..((((....)))).)))).))..... ( -8.20)
+>ECP_0048
+GGCGACAAUUUUUUUUAUCGGGAAAUCUCAAUGAUCAGUCUGAUUGCGGCGUUAGCGGUAG
+................((((((..(((.....)))...))))))(((.((....)).))). ( -9.90)
+>ECP_0057
+UUACCGAUGAUGGAACAAUAAAAUCAACGUAUGAAAAAACGUAUCCCCACUCUCCUGGCCA
+.......((((...........))))((((........))))....(((......)))... ( -4.00)
+>ECP_0085
+AGUUCUGCGUAUUGCAGAGAGGACGAACGCAUGAUCAGCAGAGUGACAGAAGCUCUAAGCA
+.(.(((((((.((((......).)))))))).)).).(((((((.......)))))..)). (-12.50)
+>ECP_0086
+GUAGUGCAAAAAUAAGGAUAAACGCGACGCAUGAAAGCAGCGGCGAAAACGCAGAAACCAA
+......................(((..(........)..)))(((....)))......... ( -7.30)
+>ECP_0087
+AAUUUGUGAUUAAUCAAGGCGAGGGUACAGGUGGCAGAUCGUAAUUUGCGCGACCUUCUUG
+....................((((((.......((((((....))))))...))))))... (-11.30)
+>ECP_0088
+CACGGUGGCGCGUCUGCUGGGGGUGAUUGCAUGAUUAGCGUAACCCUUAGCCAACUUACCG
+..((((((...((..(((((((((...(((.......)))..)))))))))..)))))))) (-22.40)
+>ECP_0089
+GGUAGUACGCGCUUUACAGGAGAAUGGGACAUGUUAGUUUGGCUGGCCGAACAUUUGGUCA
+.((((........))))..........(((......((((((....)))))).....))). ( -9.20)
+>ECP_0090
+UGGUCUGGCAACGCUGAAGGUACGUUAAUCAUGGCUGAUUACCAGGGUAAAAAUGUCGUCA
+.....(((((((.(((..(((..((((....))))..)))..))).)).....)))))... ( -8.80)
+>ECP_0091
+GUUUGCCCGUCUGGCGAAGGAGUUAGGUUGAUGCGUUUAUCUCUCCCUCGCCUGAAAAUGC
+....((...((.(((((.((((..((((..........)))))))).))))).))....)) (-17.00)
+>ECP_0092
+GAAAGCGCAGGCGUUUGUACGAGGUUCACGAUGAGUGGUCAAGGGAAGCGAUUAAUGGUGA
+..(((((....))))).........((((.((.(((.((........)).))).)).)))) (-10.10)
+>ECP_0093
+UAUGAAUUUAAGAAGUUAAUGGCGUAAAGAAUGAAUACACAACAAUUGGCAAAACUGCGUU
+((((...((((....))))...))))......................(((....)))... ( -3.70)
+>ECP_0095
+UAGUACGAAUUCUGGAACUGGCGGACUAAUAUGUCGCAGGCUGCUCUGAACACGCGAAACA
+((((.(........).))))((((((......))).(((......)))....)))...... ( -8.20)
+>ECP_0096
+GCAACAAAAUCAGGCACAGGCAGAACAACAAUGAUCAAGGCGACGGACAGAAAACUGGUAG
+........(((((((....)).((.((....)).))..................))))).. ( -2.70)
+>ECP_0097
+CAGGCGACAGGCACAAAUCGGAGAGAAACUAUGUUUGAACCAAUGGAACUUACCAAUGACG
+.......((((((....((.....)).....))))))...((.(((......))).))... ( -6.30)
+>ECP_0098
+GUUGGAUAGGUAAUUUGGCGAGAUAAUACGAUGAUCAAACAAAGGACACUUAAACGUAUCG
+(((....((((..((((....(((.........)))...))))..)).))..)))...... ( -4.80)
+>ECP_0099
+ACGUUUGAAUACGAUCGGGAUGGCAAUAACGUGAGUGGAAUACUGACGCGCUGGCGACAGU
+.........(((...((..((....))..))...)))....((((.(((....))).)))) (-11.00)
+>ECP_0100
+UCCGCAACGCGGGGCGUUUGAGAUUUUAUUAUGCUAAUCAAAUUAUUAACUAAAGUUUUCG
+.((((...))))(((((.(((....)))..))))).......................... ( -6.90)
+>ECP_0104
+AAUCAUGAUGAAUUCCCGGGAAUAUAAAUUAUGAGGUAUAUAGUUGCCUUAACGGGAGGCA
+............((((((.............(((((((......))))))).))))))... (-12.50)
+>ECP_0134
+UAAUUAUUUGGUUACAGGUCGUUAACCUCCAUGAAAGACAUAGAUACACUCAUCAGCAACA
+........(((....((((.....))))))).............................. ( -3.70)
+>ECP_0152
+CAAACGCGCACCGCGUCGUGAGGGUACCGCAUGACAGUGGCGUAUAUUGCCAUAGGCAGCA
+...((((.(((...((((((.((...)).)))))).)))))))...(((((...))))).. (-21.60)
+>ECP_0164
+UUCACUUUUUCUACGAAUCAGGAACCCUCCAUGAGUAAGUCUGAAAAUCUUUACAGCGCAG
+......(((((.((...((((((....))).)))....))..))))).............. ( -7.40)
+>ECP_0166
+CCCAAUUGCCGAUGUCGUUUGGAGCAAAAUAUGAGUGAUGACGUAGCACUGCCGCUGGAGU
+......(((..((((((((.....((.....))...)))))))).)))............. ( -9.20)
+>ECP_0174
+UGUGUUUACUGAUAUGAAAAGAGUUUAACAAUGCAGCAGUUACAGAACAUUAUUGAAACCG
+.((((((((((.........................))))....))))))........... ( -3.50)
+>ECP_0176
+CGGUAUCACCGACGCUGAUGGACAGAAUUAAUGGCUAUCUCAAUCAAGACCCCAGAAGAUA
+((((...)))).....(((((.((.......)).)))))...................... ( -7.70)
+>ECP_0177
+AACCCCAACUUUUAUAUAGAGGUUUUAAUCAUGGCAACUGUUUCCAUGCGCGACAUGCUCA
+......(((((((....))))))).....(((((.........))))).((.....))... ( -6.30)
+>ECP_0178
+CGGGCAGAUCACAUCUCCGAGGAUUUUAGAAUGGCUGAAAUUACCGCAUCCCUGGUAAAAG
+..((.((((...))))))...((((((((.....))))))))((((......))))..... (-10.00)
+>ECP_0179
+UUCAAUCGUUGACAGUCUCAGGAAAGAAACAUGGCUACCAAUGCAAAACCCGUCUAUAAAC
+......(((((..((((...............))))..))))).................. ( -5.80)
+>ECP_0180
+GACUGAGACAAGUUUUCAAGGAUUCGUAACGUGAUUAGCGAUAUCAGAAAAGAUGCUGAAG
+...(.((.((..(((((...(((((((..........)))).))).)))))..)))).).. ( -8.70)
+>ECP_0181
+UUUUUAUUCUGUCUCAACUCUGGAUGUUUCAUGAAGCAACUCACCAUUCUGGGCUCGACCG
+..........(((....(((.(((((.....(((......))).))))).)))...))).. ( -6.40)
+>ECP_0182
+CCGUAAACCCUGUCAGGGAAUAAGAAACGCGUGAUGUUGUCUGCUACUCAACCACUUAGCG
+.......((((...)))).........((((((..((((.........)))))))...))) ( -8.90)
+>ECP_0183
+GGUGAUGAAACAGCCUGAUGGGGGUCGCUUUUGCUGAAGUAUCGCCUGAUAUCUGCUUUUG
+(((((((...((((.((((....)))).....))))...)))))))............... (-14.20)
+>ECP_0184
+GGUAUUCAGGACGCUUUAACGGAAGGUAAUAUGCUGAGUUUUCUCUGGGAUUUGGCUUCGU
+.....................((((.(((.((.(((((....))).)).))))).)))).. (-10.10)
+>ECP_0185
+AGAGUUAGUUAGGAAGAACGCAUAAUAACGAUGGCGAUGAAAAAGUUGCUCAUAGCGUCGC
+.................((((.........((((((((......))))).))).))))... ( -7.70)
+>ECP_0187
+GCCGACGUACUGAAACAGGUUAAAUAAGUAAUGCCUUCAAUUCGACUGGCUGAUUUAGCGC
+((((.((...(((...((((............)))))))...))..))))........... ( -9.00)
+>ECP_0188
+CGUUUCUUAUAUUUUGACAGGAAGAGUAUCUUGACUACUAACACUCAUACUCUGCAGAUUG
+............((((.((((..((((...............))))....))))))))... ( -5.80)
+>ECP_0189
+AUGUGUGCUCGUAGCCGGGAGGCCUGAUACGUGAUUGAUAAAUCCGCCUUUGUGCAUCCAA
+.((.((((.((..(((....)))......((.((((....))))))....)).)))).)). (-10.80)
+>ECP_0190
+UGCACGCUCAACGCGCGGUCUGAUUCGUUAAUGACUGAACAGCGUCCAUUAACGAUUGCCC
+.((.((.....)).))(((.....(((((((((((........)).)))))))))..))). (-15.30)
+>ECP_0192
+UGUCGAGAUUAAGUAAACCGGAAUCUGAAGAUGUCUGAACCACGUUUCGUACACCUGCGGG
+(((((((((...((....(((((((....))).))))....)))))))).)))((....)) ( -9.40)
+>ECP_0193
+GAACUGGAGUUUGACUAAUACAGGAAUACUAUGAGUCUGAAUUUCCUUGAUUUUGAACAGC
+.....(((((((((((.....((.....))...)))).)))))))................ ( -6.90)
+>ECP_0196
+CCGGCAUUGCUACUGUAAAAUCGCACCAUCAUGACACUCACGCUCAAUAGACAACUUCUCU
+.(((..((((....))))..)))...................................... ( -2.40)
+>ECP_0204
+GUUCUACCUUCCAACUGGAACCGUAACAACAUGCGUACUAGCCAAUACCUGCUCUCCACUC
+((((((.........))))))((((......))))....(((........)))........ ( -5.80)
+>ECP_0432
+CUCCUCGAUUCCACAAACAUCAGGCAGACCAUGACAGAUUUAAUCCAACGCCCUCGUCGCC
+(((((.(((.........)))))).)).....(((((...............)).)))... ( -3.80)
+>ECP_0467
+UAAUUAAAAUUUUUCCCUAAGGGAAUUGCCGUGUUAAACCGUUAUCCUUUGUGGAAGUACG
+...........(((((.(((((((...((.((.....)).))..))))))).))))).... (-12.70)
+>ECP_0468
+UCAAGAAGCUGUCAAUCUGAGGAGUGCGAUGUGGCACAGGAAUAUACUGUUGAACAACUAA
+.......((..((........))..))..(((...((((.......))))...)))..... ( -7.50)
+>ECP_0473
+GAAGAGAUCGCGCGCCUGGAGGACUAAGCCGUGCAGGACGAGUAUUACAUGGCGCGGGCGC
+........(.((((((((....(((...((.....))...)))....)).)))))).)... (-19.90)
+>ECP_0474
+CGGGGCCAUACUCGAACCCGAAGGAAGAAAAUGAACAUUAUUGAAGCUAACGUUGCUACCC
+((((..(......)..))))........................(((.......))).... ( -9.10)
+>ECP_0475
+UCAAGGCCUGAAAUUAGUAAGGGGAAAUCCGUGAAACCUGCUGCUCGUCGCCGCGCUCGUG
+....(((.(((...(((((.((..............))))))).)))..)))......... ( -9.00)
+>ECP_0476
+UUUUCUUUUUUACCUGCUGAGGCAUAACGUAUGGCAUGUGGCGAGUUCUCCCUGAUUGCCC
+............(((....)))..........((((...((.((....))))....)))). ( -9.90)
+>ECP_0479
+AAAUAAACAAUAAGUAUUAAUAGGCCCCUGAUGAGUUUUGAUAUUGCCAAAUACCCGACCC
+.............(((((....(((.....((........))...))).)))))....... ( -2.40)
+>ECP_0480
+UCUAACCCCUUUUACACCGGACAAUGAGUAAUGGACUUUCCGCAGCAACUCGAAGCCUGCG
+..................(((....((((.....)))))))(((((........).)))). ( -7.70)
+>ECP_0531
+AUCCACCUUCCAGCGUUUCAGAGCCUGCCAAUGAGUUAUCAGGUCUUAGCCCGAAAAUGGC
+..(((..(((..((.....(((.((((............)))))))..))..)))..))). ( -9.40)
+>ECP_0535
+AAUUCGACACAUUUUAAGGGGAUUUUCGCAAUGCGUAUCAUUCUGCUUGGCGCUCCGGGCG
+..................(((((...(((...)))....)))))((((((....)))))). (-11.00)
+>ECP_0536
+AUCAACAAGUUGAAUCGAUAAGAGGCGGUAAUGCGUCAAACUAAAACCGGUAUCCUGCUGG
+.((((....))))........((.(((....))).)).........((((((...)))))) (-10.60)
+>ECP_0585
+CAUUGAAAGCGUGACCGUUAGCGAGUAAUCGUGGCGACACUCUUUAUUGCAGAUCUUCAUC
+.....((((.(((..(((((.(((....)))))))).))).))))................ (-11.70)
+>ECP_0587
+UUACCCACACAUGUCUAAACGGAAUCUUCGAUGCUAAAAAUCUUCAAUACUCUGACACGCC
+...........((((......(((.....(((.......))))))........)))).... ( -1.90)
+>ECP_0590
+ACCUACGUAACAGAUGGAAUCCUCUCUCUGAUGGCAGCAAAGAUUAUUGACGGUAAAACGA
+......((..((((.(((....))).))))...))...............((......)). ( -5.90)
+>ECP_0664
+AGCGGUUGCCGCAGCGGAGGACCAUUAAUCAUGACGGAUAAUCCGAAUAAAAAAACAUUCU
+.((((...))))..((((..(((.(((....))).)).)..))))................ (-11.50)
+>ECP_0665
+UAAGUGAGCUUUGAGUAGAAAACGCAGCGGAUGAAACUACAGAACUCUUUUCGCGACUAUA
+.....(((.(((((((......((...))......))).)))).))).............. ( -6.00)
+>ECP_0669
+CCCUGGCGGACGUAUUUAUCGACGGUUGAUAUGAAAUCUUUACAGGCUCUGUUUGGCGGCA
+.((((..(((((((((.(((...))).))))))...)))...))))..((((...)))).. ( -9.60)
+>ECP_0670
+UGCACGCGUCUCCACCACGCUGGGUAACUGAUGAUUCGGUUGUACCCGGAACAACUCCGCG
+....((((...........((((((((((((....)))))..)))))))........)))) (-18.00)
+>ECP_0671
+UCUGGUCGUUGGCUAAGCGCGGGAGGAAGCGUGCGAUAUCUGGCAACAUUGUUGUUAUCUC
+..(((((...))))).(((((........)))))......(((((((...))))))).... (-14.10)
+>ECP_0672
+GCCGUAUUGAAAACAGGACCACUGGCUGCCAUGCAAGAGCAAUACCGCCCGGAAGAGAUAG
+((.((((((....(((.....)))((......)).....)))))).))............. (-10.10)
+>ECP_0680
+GAAUAAAACCGAAACUGGAUAGAUAACUACAUGGCUUUUGCCUCAUUAAUUGAACGCCAGC
+..............((((..............(((....)))..............)))). ( -9.60)
+>ECP_0700
+AUACGUUGUUUACGCUUUGAGGAAUCCACGAUGAGUGAGGCAGAAGCCCGCCCGACUAACU
+...((((((.....((....)).....))))))(((..(((........)))..))).... (-10.30)
+>ECP_0705
+UUCAAUAAGUUUCAAGAGGUUAUUUCACUCAUGGCUAUCACUGGCAUCUUUUUCGGCAGCG
+.......(((..((.(((.........))).)))))....(((.(.........).))).. ( -6.00)
+>ECP_0743
+GAGUCUUCAUGCGAUGAGCAAGGAGUCAUGAUGUUAGAUAUAGUCGAACUGUCGCGCUUAC
+((.((((..(((.....))))))).))..((((((.(((...))).))).)))........ (-10.90)
+>ECP_0898
+AAUUACGGUAGUGAUACCCCAGAGGAUUAGAUGGCCAAAGAAGACAAUAUUGAAAUGCAAG
+......(((..((((.((.....))))))....)))......................... ( -5.10)
+>ECP_0900
+UUACUGGCCCAUCGUCAGGAGGAGAUUUAAAUGCGCGCUUUGCUACCCUAUCUGGCACUGU
+...(((((.....)))))..................((..(((((.......)))))..)) ( -9.30)
+>ECP_0904
+AGGAAAAGCCUGUAACCUGGAGAGCCUUUCUUGAGCCAGGAAUACACUGAAGACAAAGAAG
+(((.....)))(((.((((((((.....)))....)))))..)))................ ( -9.20)
+>ECP_0905
+AUUGGGAGUGACGUAAUUUGAGGAAUAAUGAUGAAAAAAAUUGCCAUCACCUGUGCAUUAC
+....((.((((.(((((((..................)))))))..))))))......... ( -7.30)
+>ECP_0907
+CCCAUUUAAUUCGAUAAGCACAGGAUAAGCAUGCUCGAUCCCAAUCUGCUGCGUAAUGAGC
+.................((.((......(((.((..(((....))).)))))....)).)) ( -6.20)
+>ECP_0922
+GGACGUUAAAUAUAAACCUGAAGAUUAAACAUGACUGAAUCUUUUGCUCAACUCUUUGAAG
+...................(((((((...........)))))))...((((....)))).. ( -3.10)
+>ECP_0925
+CGGCUAUUUCAACAAAUGCUGGUUUUUUGAAUGCAUAACGACAAAGAUCUCUCUACGUGGC
+..((...(((((.((((....)))).))))).))....(.((..(((....)))..)).). ( -6.40)
+>ECP_0926
+CGCGCAACUUCACAAAAUGCAGUUUGGCCAAUGAUCGAAAAAAUCUGGUCUGGUGAAUCCC
+...(((...........)))...((.((((..(((((........))))))))).)).... ( -8.90)
+>ECP_0929
+CCGCGUGCUGACUGCUGAUGAGAGUAAAUCAUGAGUUUUGUGGUCAUUAUUCCCGCGCGUU
+.((((((.((((((((.((((.......)))).))).....))))).......)))))).. (-17.00)
+>ECP_0933
+CGCGCGCAAACCGCAGAGCAAGGAUAAAGUAUGAGUGAAUUUUCCCAGACAGUCCCCGAAC
+.((.(((.....)).).))..((((...((.((.(.((....))))).)).))))...... ( -6.60)
+>ECP_0934
+UUAAUGAUUACGGAGCCAAGGUACAGGCGCAUGUCAUCGACAAAUAUUGAACAAGUGAUGC
+.....(((.(((..(((........)))...))).)))....................... ( -8.30)
+>ECP_0935
+GAGUCAGCCAGAUAGCGGAGAGGAAGAAUAAUGAUUGAACGCGGUAAAUUUCGCUCACUGA
+........(((..(((((((.............((((....))))...)))))))..))). ( -7.60)
+>ECP_0941
+UUUUUUCCGACUAUUAACAGAGAGAAUAUUAUGAGCGUUGUGCCUGUAGCCGACGUACUCC
+(((((((.(........).)))))))........((((((.((.....))))))))..... (-10.80)
+>ECP_0959
+UGCUUCAAUAAAAUAAGGCUUACAGAGAACAUGGUAGAUAAACGCGAAUCCUAUACAAAAG
+..................((..((.......))..))........................ ( -1.40)
+>ECP_1061
+UUUUGCCCGUGGGUCUGGAUUAGAACACCGAUGAAUUUAUUAAAAUCGCUGGCCGCCGUCA
+.......((..((((.(((((......................)))).).))))..))... ( -7.20)
+>ECP_1076
+CGUCAAUGUAAGAAUAAUGAGUAAGUUACGAUGAAAAGAAUGUUAAUCAACGCAACUCAGC
+.................(((((..(((..(((.............))))))...))))).. ( -4.90)
+>ECP_1077
+ACGGUUAUCGUCAGCUCAAAGAGGCGCAGAGUGUCGGUUGCCCGUUUUUCAUGCGGAAAAA
+..(((.((((.((.(((...........))))).)))).)))..((((((....)))))). (-12.50)
+>ECP_1084
+CUGGUUCGUUUCUAGGAUAAGGAUUAAAACAUGACGCAAUUUGCAUUUGUGUUCCCUGGAC
+..........((((((....(........)..(((((((.......))))))).)))))). (-10.10)
+>ECP_1085
+GCGGCGCUCGAGCUUUAAAAGAGGAAAAUCAUGAAUUUUGAAGGAAAAAUCGCACUGGUAA
+((((........((((((((...............))))))))......))))........ ( -7.50)
+>ECP_1086
+AAAGCGAGUUUUGAUAGGAAAUUUAAGAGUAUGAGCACUAUCGAAGAACGCGUUAAGAAAA
+...(((..(((((((((....................)))))))))..))).......... (-11.60)
+>ECP_1090
+AGGAUUAUCUGAAAGUGCUUAAGGAAAAAAAUGCGCAGUAAGUAUAUCGUCAUUGAGGGGC
+..(((...((....((((..............))))....))...)))............. ( -6.20)
+>ECP_1091
+CGUGACCAACUGGGUGAAGGAGUUGGACGCAUGAGAUGGUAUCCAUGGUUACGACCUGAUU
+((((((((..((((((.......((....))........))))))))))))))........ (-16.30)
+>ECP_1109
+GUCUUUGCUAACAGCAACCAGACGGAUUUCAUGUACCAACCUGUCGCUCUAUUUAUUGGCC
+(((((((((...)))))..))))............((((...((......))...)))).. ( -7.80)
+>ECP_1110
+CCGCCACUCAACCCGCUGAGGCUUUACGUUAUGAAUAAGAUCCUGUUGCAAUGCGACAACC
+..(((..(((......)))))).....................((((((...))))))... ( -9.90)
+>ECP_1126
+CUUGCUCAUUUAACCCCGGAGUUGUGAUCUAUGGAAUUAUCCUCACUGACCGCCGUUUCCC
+................(((.(((((((.....(((....))))))).)))..)))...... ( -8.10)
+>ECP_1252
+CAGUUAUGUACACACUCAGGACAAAAAAACGUGACGAUUAAAUUGAUUGUCGGCCUGGCGA
+...............(((((.(.........(((((((((...)))))))))))))))... ( -9.70)
+>ECP_1255
+ACCAAUGGACGCAUGCCUGAGGUUCUUCUCGUGCCUGAUAUGAAGCUUUUUGCUGGUAACG
+(((........((.((.(((((....))))).)).))......(((.....)))))).... (-10.30)
+>ECP_1256
+GUUAAAAAUGGAUAACUGGAUAGUGAAAUAAUGCGGACACAGUGGCCCUCUCCGGCAAAAC
+..............((((....((........)).....)))).(((......)))..... ( -7.10)
+>ECP_1257
+UGCAACGUAUCUCAAGGACUUGUCAUUAUUAUGCCCCUGCCCGAUUUUCGCUUUAUCCGCC
+...............(((...((.(..(((..((....))..)))..).))....)))... ( -3.00)
+>ECP_1258
+CUAUCAACGUUGGUAUUAUUUCCCGCAGACAUGACCCUUUUAGCACUCGGUAUCAACCAUA
+........(((((((.......(((.((...(((.....)))...)))))))))))).... ( -6.90)
+>ECP_1259
+UUUCUUUUUUUACAGGGUGCAUUUACGCCUAUGAAGCCUUCUAUCGUUGCCAAACUGGAAG
+..............(((((......))))).......((((((..(((....))))))))) (-10.00)
+>ECP_1260
+CCAACUGGCGGCGUUGUCCGAGCAGGAAUAAUGGAAUAUCAACACUGGUUACGUGAAGCAA
+.((...(.(((.(((((((.....)))............)))).))).)....))...... ( -8.10)
+>ECP_1263
+CGACAUUUUACUCAAGAUUAAGGCGAUCCUAUGAAACAAAAAGUGGUUAGCAUUGGCGACA
+...........(((.((((.....))))...)))........((.((((....)))).)). ( -5.40)
+>ECP_1325
+CCUGGAAGAAUCAAAUUAGGUAAGGUGAAUAUGGGUAAAGCUCUUGUCAUCGUUGAGUCCC
+((((............))))...(((((....((((...))))...))))).......... ( -7.80)
+>ECP_1330
+AUACAGAACCAGCAUUAUCUGGAGAAUUUCAUGCAGCUUAAACGUGUGGCAGAAGCCAAAC
+........((((......))))....((((.(((.((........)).)))))))...... ( -9.40)
+>ECP_1342
+CAACAAGCAUCAACAAUAAGGAUUAAAGCUAUGGGUUUUCUUUCCGGUAAGCGCAUUCUGG
+..................(((((....(((((.((........)).)).)))..))))).. ( -8.90)
+>ECP_1609
+AUGUCUUAACUGAUUUCAGGAGUUGUAAGUAUGUUUACGGGGAUUGUACAGGGCACCGCAA
+.((((((...(((((((......(((((......))))))))))))...))))))...... ( -6.90)
+>ECP_1661
+CAAACAGUUUAAAUAAGGCAGGAAUAGAUUAUGAAAUUCAGUGAACUGUGGUUACGCGAAU
+...((((((((.......((...........))........))))))))............ ( -6.50)
+>ECP_1662
+AGUGUCACCACUGACACAAUGAGGAAAAACAUGUCACAUCUCGCAGAACUGGUUGCCAGUG
+.((((((....))))))...(((................))).....(((((...))))). (-12.50)
+>ECP_1663
+UAAUUAGAAUAUAGAUACAGGAGAGCACAUAUGGCUCGCGUAAAACGUGGUGUUAUUGCAC
+........................(((...(((((((((((...)))))).)))))))).. (-10.30)
+>ECP_1665
+CGCAGUCUUAAACAAUUGGAGGAAUAAGGUAUUAAAGGCGGAAAACGAGUUCAAACGGCGC
+(((.(((((......(((......))).......))))).(((......))).....))). ( -2.70)
+>ECP_1666
+GUGGGUCACCACUGCAAAUAAGGAUAUAAAAUGCCUGUUAUAACUCUUCCUGAUGGCAGCC
+((((....))))(((.....(((((((((........))))).....))))....)))... (-12.00)
+>ECP_1686
+AGUUUUGUCUUUUCUGUCUGGAGGGGUUCAAUGACAUUGCAACAACAAAUAAUAAAGGCGC
+.....(((((((..(((.((..(..((...........))..)..)).)))..))))))). ( -9.00)
+>ECP_1727
+UUAUUCACUAACAAAUAGCUGGUGGAAUAUAUGACUAUCAAAGUAGGUAUCAACGGUUUUG
+...(((((((.(.....).))))))).....(((.((((......)))))))......... ( -7.50)
+>ECP_1750
+GCCUUUUUAUUGAUCUAAGCACGAAGACCCAUGCGAAUUCUGGCUAUCGAUACCGCGACAG
+((.....(((((((...(((..(((..(......)..)))..))))))))))..))..... ( -7.60)
+>ECP_1810
+UCCGCCGGCAGCUAAGUUAAGGGAUAUCUCAUGCGUACAGAAUAUUGUGGACAGCUCCGUU
+.....(((.((((..(((..(.(((((.((.((....))))))))).).)))))))))).. (-11.40)
+>ECP_1822
+UUGCUCGCUUCAUCAAUGUAAGGUAUUCCGGUGAAUAUUCAGGCUCUUCUCUCAGAAAAAG
+..(((...((((((...(((...)))...))))))......)))................. ( -4.10)
+>ECP_1852
+CUUACUGACAACAGAUAGUUACCCGUCAUUAUGCAAUUUAAUAUCCCUACGUUGCUUACAC
+.....(((((((.....)))....))))....(((((.((.......)).)))))...... ( -4.70)
+>ECP_2152
+CCUUUUCACUAUUAAGAAGUAAUGCCUACUAUGACUCAAGUCGCGAAGAAAAUUCUGGUGA
+.....((((((......((((.....))))..(((....)))..(((.....))))))))) ( -6.70)
+>ECP_2193
+GAGGCGUCACACCUGCAGGAGAAAUCAUAAAUGCCAUCACUCAGUAAAGAAGCGGCCCUGG
+.(((.(((.(..((....(((..................))).....))..).)))))).. ( -7.70)
+>ECP_2229
+AAGCGCACUAAGGGAAACAGAUAACAGGUUAUGGUAACUCAUCGUCAGCGCUACCGUGAAA
+.(((((((...(((..((..((((....)))).))..)))...))..)))))......... ( -8.30)
+>ECP_2274
+UCCGGGAUACAGUAGAGGGAUAGCGGUUAGAUGAGCGACCUUGCGAGAGAAAUUACACCGG
+.((((..((..(((.(((....((..........))..)))))).........))..)))) ( -9.20)
+>ECP_2277
+UGAAGCUAUUGAAAAACAGGUACGACAUACAUGAAUCAGAAUCUGCUGGUGACAAAGCGCG
+....(((.(((.....((.(((.....))).)).(((((......)))))..))))))... ( -5.00)
+>ECP_2278
+CCGGCAUAAAACUCCUAACAGGACACAUUCAUGGCAUAUACCACCUUUUCACAGACGAAAA
+..(.(((.....((((...)))).......))).)...........((((......)))). ( -4.40)
+>ECP_2354
+UAUUCUCACCGUAACGAAUCAGCGGAUACCAUGAUUAUCAAACGCACUCCUCAAGCCGCGU
+........((((.........))))................((((.((.....))..)))) ( -6.10)
+>ECP_2355
+UCGAACCAGGUUCAGACAGAAAGGUCCCUAAUGAGCUGGAUUGAACGAAUUAAAAGCAACA
+((((.((((.(((((((......))).....)))))))).))))................. (-11.60)
+>ECP_2362
+UACUCUAUGUGCGACUUACAGAGGUAUUGAAUGAAACGUGCAGUGAUUACUGGCCUGGGCA
+(((.((.((((.....)))).)))))...........((.(((.(........)))).)). ( -8.00)
+>ECP_2422
+UCGGCAUCUUUCUAAACGUAAGGCCAUUUCAUGAAAAUCAAAACUCGCUUCGCGCCAAGCC
+..(((..(((.........)))))).....................((((......)))). ( -5.10)
+>ECP_2435
+GUCGGGGGUUUUUAGCAUUGAUGGUGCGAUAUGGAAUCAAUCGAACAACAACUGACAGAAC
+(((((..(((....(.((((((.............)))))))....)))..)))))..... (-13.40)
+>ECP_2436
+UGGCAAGGUGUUAGAACAACAGAGAAUAUAAUGAUGCAGGAUUUGCGUCUGAUAUUAAUCA
+(((((...)))))........((.(((((...((((((.....))))))..)))))..)). ( -9.20)
+>ECP_2485
+UAUCAGCAAUUUUUCCAUGAGGUGUAGUCUAUGUCGUGCCCGGUUAUUGAGCUGACACAAC
+..(((((((((....(((((.(((.....))).)))))...)))).....)))))...... (-10.00)
+>ECP_2492
+UGAGACACUUGUUUGCACAGAGGAUGGCCCAUGUUCACGGGAAGUAUUGUCGCGAUUGUUA
+............((((((((...((..(((........)))..)).)))).))))...... (-10.50)
+>ECP_2498
+CGAUUUUGUGAAAUCCUGGUUGAGGUAUCUCUGAACACACCGGCACAGCUCUCUUUGCCAC
+.(((((....))))).(((((.(((....))).))).))..((((.((....)).)))).. (-10.30)
+>ECP_2516
+CUGAUGAUUUAUAAAAAUGAGGCUUUAAACAUGGUACCUGUGGUCGCGCUUGUCGGGCGCC
+..(((.((........(((..........))).......)).)))((((((...)))))). ( -8.90)
+>ECP_2519
+UUCAUUUUUAUAUUCAGAAAGAGAAUAAACGUGGCAAAAAACAUUCAAGCCAUUCGCGGCA
+.((((.(((((.(((.....))).))))).))))..............(((......))). ( -8.70)
+>ECP_2520
+GUAACAGACGGGUAACGCGGGAGAUUUUUCAUGCAUAACCAGGCUCCAAUUCAACGUAGAA
+.....((...(((...(((.(((....))).)))...)))...))................ ( -6.10)
+>ECP_2538
+CCGUUCUUUAACAUCCAGUGAGAGAGACCGAUGCAUCCGAUGCUGAACAUCGCCGUGCGCG
+.((.(((((..(((...)))..))))).))..((((.(((((.....)))))..))))... (-14.30)
+>ECP_2561
+CGCCGCGCUUUUAUAACCGGAGUUUUCUUUUUGUCUGAAGUCGAAUUUAGCCACGAAUACU
+...((.(((((.((((..(((....)))..))))..))))))).................. ( -5.50)
+>ECP_2565
+GAAACGUCUGAUGCUGGAAGCGCGUGGCUAAUGGCAAUAUUAGGUUUAGGUACGGAUAUUG
+.....(((((.((((.(((.(...((.(....).))......).))).))))))))).... (-11.10)
+>ECP_2568
+CGAACAGGCGUUGAAAAAACUGGAGCUGGAAUGAGCAUCGAUAAAAGUUACUGCGGAUUUA
+.......(((.(((......(.(((((......))).)).)......))).)))....... ( -7.20)
+>ECP_2570
+AAAGACAACAAAUAACCCUUAGGAGUUGGCAUGGCGAAUAUGUUUGCCCUGAUUCUGGUGA
+..............(((....((((((((...((((((....))))))))))))))))).. (-13.20)
+>ECP_2575
+GAAAUUUGGUUUGGGGAGACUUUACCUCGGAUGAGCGAGCAGUUAACGGACCAGGUCCUGG
+...((((((((((....((((....((((......)))).))))..))))))))))..... (-15.40)
+>ECP_2587
+CUUCAAUGAACAGAGAAGAAAUGCACUGUGAUGUUGUCAAAAUUUAAGCGUAAUAAACAUC
+.........((((.(........).))))((((((....................)))))) ( -4.90)
+>ECP_2598
+GUAUUACAUUUUGAGGAAAGUCAAAACGUCAUGACGCGCAUGAAAUAUCUGGUGGCAGCCG
+........((((((......))))))..(((((.....))))).......(((....))). ( -9.20)
+>ECP_2607
+AUCAGUUUACCCAGGAUAAGAGAUUAAAUUAUGAGCAACAUUAUUAAGCAACUUGAACAAG
+....(((((.....(((.....)))......))))).......(((((...)))))..... ( -0.50)
+>ECP_2608
+ACCACCGGAUAAACGGUAAAAGACGGCGCUAUGUGGAUUGGCAUAAUUAGCCUGUUUCCUG
+...((((......))))...((((((.((((((((......))))..)))))))))).... (-16.90)
+>ECP_2610
+CCGGUUGUUUUAUUCACACAAGAGGAUGUUAUGGUAACUAUUCGUUUAGCACGUCACGGCG
+...(((((.............((.(.(((((...............)))))).))))))). ( -5.50)
+>ECP_2611
+GCCAACCGUUUCCACCCCAGGCGAGAGACAAUGUUUGAUAAUUUAACCGAUCGUUUGUCGC
+....................((((.((((.(((.((((....)))).).)).)))).)))) ( -8.80)
+>ECP_2614
+GAUGAAUGCGAAAAAAACGCGGAGAAAUUCAUGAGUAGUAAAGAACAGAAAACGCCUGAGG
+.(((((((((.......)))......)))))).............(((.......)))... ( -5.10)
+>ECP_2615
+AUCAAUCUUCGCAACAAGGACCUCGGAAAAAUGAAUAAUCAUUUCAAGUGUAUUGGCAUUG
+............................((((((....))))))..(((((....))))). ( -4.50)
+>ECP_2656
+CGACUCUUUUAAUCUUUCAAGGAGCAAAGAAUGCUGAUUCUGACUCGUCGAGUUGGUGAGA
+((((((...............(((...(((((....)))))..)))...))))))...... (-10.30)
+>ECP_2657
+AUAUUUCGUUAGCUUGAUUUCAGGAUAAUUAUGAGCAAGAGCACCGCUGAGAUCCGUCAGG
+...........((((...((((.........))))...))))....((((......)))). ( -9.50)
+>ECP_2728
+CACCCGAACCAUCCAUCAGGAGAAUACAUAAUGCGAAUUGGACACGGUUUUGACGUACACG
+...(.(((((.((((...(.(..........).)....))))...))))).)......... ( -7.10)
+>ECP_2729
+AACAAUCGAUAAAUCAGCCCGGGAAUUAACAUGGCAACCACUCAUUUGGAUGUUUGCGCCG
+...................(((.....(((((..(((........))).)))))....))) ( -6.00)
+>ECP_2730
+GGAUGAAGAUGCCGUUUUUCAGGGGGCAGGAUGGGUAAACUAACGCUGCUGUUGCUGGCUA
+...((((((......))))))((.(((((.(.(.((......)).)).))))).))..... (-13.30)
+>ECP_2760
+CAGUUUAACUAGUGACUUGAGGAAAACCUAAUGUCCAAAAUCGUAAAAAUCAUCGGUCGUG
+.............(((...(((....)))...)))((..((((..........))))..)) ( -6.00)
+>ECP_2761
+GUCUUUUCAACCUAACUUCUCAGGUUCAGCAUGACAACGAACUAUAUUUUUGUGACCGGCG
+(((.....(((((........)))))......))).(((((.......)))))........ ( -6.90)
+>ECP_2841
+CAGCGAAAUAACAAGAACUUGUGGUGACAGAUGACCAGUAGCUAUCUGCAUUUUCCGGAGU
+....((((.....(((.((..((((........))))..))...)))....))))...... ( -8.20)
+>ECP_2884
+CUCGAAGCCGUUGUCGACACCCUCGACCAAAUGAAACAGGGGCUGGAAGAUGUUUCUGGUC
+........(((((((((.....)))))..))))...(((((((........)))))))... (-13.20)
+>ECP_2914
+UAUAAGGCCCGACGAUACAGGACAAGAGACAUGUCUAAGAUUUUUGAUUUCGUAAAACCUG
+....(((....((((..(((((....(((....))).....)))))...))))....))). ( -7.70)
+>ECP_2915
+AAACUUUUAGAAUCAACGAGAGGAUUCACCAUGUCUGUAAUUAAGAUGACCGAUCUGGAUC
+.........(((((........))))).(((.(((.((..........)).))).)))... ( -8.30)
+>ECP_2935
+UAACCAAAUUCUCUUUAGGUGAUAUUAAAUAUGGCAAAACACCUUUUUACGUCCGAGUCCG
+................(((((..................)))))................. ( -3.70)
+>ECP_2943
+CACCAUGCCUGGUGUGGCAGGACACGCCUGAUGAGUGGAACCUUACUCGCCUUCGACUUCG
+((((((....((((((......))))))..))).)))........................ (-14.60)
+>ECP_3107
+UGCCAGUCUCUCAGACCUUCAGAGGGUGUUAUGCUAUAUAUCUUUCGUCUUAUUAUUACCG
+.....((((...)))).....((((((((........))))))))................ ( -6.70)
+>ECP_3108
+GCUGGCGAAUAAGUUGAGGAAUCAGAAUUAAUGAGCGAUAUGGCAGAGCGCCUUGCGCUAC
+.(((.((.((..(((.(..(((....)))..).))).)).)).)))(((((...))))).. (-12.80)
+>ECP_3122
+GACGAUCAACUCGAAUUGCUAACUUAAACCAUGACGCAAACUUAUAACGCUGAUGCCAUUG
+..(((.....)))..((((................)))).........((....))..... ( -2.60)
+>ECP_3136
+UAACCAUAAUUUUAGUGAGGUUUUUUUACCAUGAAUCAGACGCUACUUUCCUCUUUUGGUA
+..((((.......((((..((((.((((...))))..))))..)))).........)))). ( -6.60)
+>ECP_3146
+GAAUUGUGUAUUUGACGAAGGGAUGAUGGCGUGAAGAUUUAUCUGGUCGGUGGUGCUGUUC
+((((...(((((...(((..((((((............))))))..)))..))))).)))) (-10.30)
+>ECP_3148
+UCCGGUUAGCCAAAAAGCAGGCAGGACGUGAUGGAUAUUGUAUUUAUAGAGCAACUUUCGG
+((..(((.(((........)))..)))..)).(((..((((.........))))..))).. ( -9.50)
+>ECP_3154
+GCGCGGUAAUAAAGCGAGGUAAAACAAGUCAUGCGUGUACUGGGUAUUGAAACUUCCUGCG
+((.(((((.....(((.((.........)).)))...))))).))................ ( -8.90)
+>ECP_3156
+UCGUUUAUGAAUUGCUAAAAAUCGGGGCCUAUGGCUGGACGAAUCCCACGCGUAUUCAUUA
+......(((((((((......(((.((((...))))...))).......))).)))))).. (-11.00)
+>ECP_3157
+ACCUCAUGAAAUAAGUGUGGAUACCGUCUUAUGGAGCAAAACCCGCAGUCACAGCUGAAAC
+.((.(((.......))).))...((((...))))...........((((....)))).... ( -6.80)
+>ECP_3256
+GCGUAAUAAACUGUAGCAGGAAGGAACAGCAUGACAGAUGUAACGAUUAAAACGCUGGCCG
+((.............)).....((..((((......(((......))).....)))).)). ( -6.40)
+>ECP_3257
+UAAUAGUCUGGAUGAGGUGAAAAGCCCGCGAUGAACAAAGAAAUUUUGGCUGUAGUUGAAG
+..((((((.((((..(((.....)))................)))).))))))........ ( -6.00)
+>ECP_3263
+CCACUCUGUCUGCAAAGGAAAACAAACGCUAUGAGUAAUCGUAAAUAUUUCGGUACCGAUG
+..((((.....((..............))...)))).((((.........))))....... ( -3.70)
+>ECP_3265
+UUGUAAUAAGAGGUUAAUCCCUUGAGUGACAUGGCGAAAAACCUAAUACUCUGGCUGGUCA
+..........(((((..((((.((.....)).)).))..)))))................. ( -8.20)
+>ECP_3270
+CGCGCAGGCGAAUGAUUUACGGAGAAUAAAAUGAAGUUUGUUGAUGAGGCAUCGAUUCUGG
+(((....))).........((((................(((((((...))))))))))). ( -9.10)
+>ECP_3272
+CAGCGCCUAAGACCUGAGGAGAGAUUUCAAAUGGCACAUAAAAAGGCUGGCGGCUCCACAC
+.((((((..((.(((............................)))))))).)))...... ( -8.60)
+>ECP_3273
+GAAAAGGUGUGCGCGGAAGCGGAGUUUUAUAUGUACGCGGUUUUCCAAAGUGGUGGUAAAC
+......(((((((..(((((...)))))...))))))).((((.(((......))).)))) (-12.10)
+>ECP_3274
+GUAAUCGGGGCGAAAAGCCCGGCUUUUGCGAUGAAUUUAGAAAAAAUCAAUGAGUUAACCG
+((((.(.((((.....)))).)...))))....((((((...........))))))..... (-11.50)
+>ECP_3276
+GAUAUGAAUUGUUAACUGAGAACAAACUAAAUGGAUAAAUUUCGUGUUCAGGGGCCAACGA
+........(((((..((..(((((....((((......))))..)))))..))...))))) ( -7.70)
+>ECP_3287
+CAAACUGGAUGAAGCCAAAGGGCAAUCGAUAUGAGUAAAGCCAGACGUUGGGUUAUCAUUG
+.......(((((..((((..(((..((.....)).....))).....)))).))))).... ( -9.90)
+>ECP_3288
+CCGAGCUGAUUGAAAAGGUUAGAACAUCCUAUGAAAUUCAAAACAAACAAACUCAGCCUUA
+....((((((((((.....(((......))).....)))))...........))))).... ( -7.50)
+>ECP_3289
+CCGGCACAGAAGAAGGGUAAUUAAUUCGUUAUGGCAACAUUAACUGCAAAGAACCUUGCAA
+((..(......)..))...........((((((....)).))))(((((......))))). ( -7.40)
+>ECP_3313
+GUUCUUGACAUCUAAUCGGGAUUAUAGGCAAUGGCUGAAAAUCAAUACUACGGCACUGGUC
+..((((((.......)))))).....(((....((((.............))))....))) ( -7.90)
+>ECP_3314
+ACGUGUAACUAUUUAUUGGGUAAGCUUUUAAUGAAAACUUUUACAGCUAAACCAGAAACCG
+................(((...((((...((........))...))))...)))....... ( -5.60)
+>ECP_3318
+GCCGUUCCCUUUUUUAACGAUGCCUCCAUCAUGUUUGUGAAGCUCUUACGUUCCGUUGCGA
+........((((...(((((((....))))..)))...))))......(((......))). ( -5.30)
+>ECP_3332
+ACCGCCUGCGCGUGCGCCGGGAGGACAAUAGUGGCGAGCUAUCGUAGCCAGGGACGCUGGG
+.((.((((.((....)))))).))((.(((((.....))))).))..((((.....)))). (-19.30)
+>ECP_3333
+CCUGGUCUGAUACGAGAAUACGCAUAACUUAUGAAGCCAAUUUUUAGCCGUGGCCCGUCGC
+...((((......((((((..((............))..))))))......))))...... ( -6.50)
+>ECP_3334
+CCGCCCCAGCUUUCAGGAUUAUCCCUUAGUAUGUUGAAAAAAUUUCGUGGCAUGUUUUCCA
+((((......((((((.((...........)).)))))).......))))........... ( -6.50)
+>ECP_3340
+CACACUAAACAAAGAGUACGGAACCCACUCAUGGAUAUUCGUAAGAUUAAAAAACUGAUCG
+................((((((..(((....)))...)))))).(((((......))))). ( -7.90)
+>ECP_3341
+CGCUGGUCGUCAUCGAGUAACGAGGCGAACAUGCUGGAUAAAAUUGUUAUUGCCAACCGCG
+.((((.(((((.(((.....)))))))).)).))(((.(((........))))))...... (-12.60)
+>ECP_3370
+AGAAAACCGCGCAGGGUGUAAAACACUUUUGUGCCAGUAAACAAUGUGGAAAGCCGGUUUC
+...((((((((((((((((...)))).))))))).............((....))))))). (-13.40)
+>ECP_3374
+UCUAACUCCUGAACACAUCUCUGGAGAUUUAUGUCAGUUUUGCAAGUGUUACAUAUUCCGG
+.....((((.((.......)).))))...(((((((.((....)).))..)))))...... ( -7.30)
+>ECP_3375
+GAAAGCCCGGGCUUAAGGAUAAGAAUUAACGUGUCAGAAUCACUACGUAUUAUUUUUGCGG
+..((((....))))...(.(((((((..(((((..........)))))...)))))))).. ( -6.30)
+>ECP_3382
+GGUUAAGGUUUUACUGAGAAGGAUAAGGUCAUGCGCCAUCGUAAGAGUGGUCGUCAACUGA
+((((.(.(..(((((....(.(((..(((.....)))))).)...))))).).).)))).. ( -7.20)
+>ECP_3383
+AGUAAAGCUUAGUACCAAAGAGAGGACACAAUGCAGGGUUCUGUGACAGAGUUUCUAAAAC
+........((((.(((....(.(((((.(......).))))).)....).))..))))... ( -5.70)
+>ECP_3384
+CUCGUUUUCCAGGUUUGUUGGAGAAAGAAAAUGGCAAGAUAUUUGGGUCCUAAGCUCAAGC
+.((.((((((((.....)))))))).)).............(((((((.....))))))). (-12.60)
+>ECP_3385
+CGAUCAAGAAAUAAUCGGGGUGAUUGAAUAAUGGCAAAGGCACCAAUUCGUGCACGUAAAC
+((((.........))))(.(((..(((((..(((........))))))))..))).).... ( -9.30)
+>ECP_3386
+AACGUACAUAUUAAAUAGUAGGAGUGCAUAGUGGCCCGUAUAGCAGGCAUUAACAUUCCUG
+..................((((((((..(((((.((.((...)).))))))).)))))))) (-14.00)
+>ECP_3388
+CUGGCGGUAAAAUCGAGGAAUAAGUAGCAGAUGGCUAAACAACCGGGAUUAGAUUUUCAAA
+.(((.(((..((((..((......((((.....)))).....))..))))..))).))).. ( -9.40)
+>ECP_3389
+UCCUUCAUGGUUAAAGUUGAGGAGUAAGAGAUGCGUUUAAAUACUCUGUCUCCGGCCGAAG
+..((((..((((........((((..((((((........)).))))..)))))))))))) (-14.00)
+>ECP_3390
+UCCGUUGAAGAAAUUCUGGGGAAAUAAACCAUGGCAAAGACUAUUAAAAUUACUCAAACCC
+(((.(.(((....))).).)))....................................... ( -5.20)
+>ECP_3391
+UGGCCUUCAGUUCUAAGGUAGAGGUGUAAGAUGGCUCACAUCGAAAAACAAGCUGGCGAAC
+(.(((..((.(((((...))))).))...((((.....))))............))).).. (-10.80)
+>ECP_3392
+AAAGAGGCUAAGAAGAAGUAAGGUAACACUAUGGAUAAGAAAUCUGCUCGUAUCCGUCGUG
+..........................(((.(((((((.((.......)).))))))).))) (-10.20)
+>ECP_3393
+AUCUGCUACGUAGCCUAAUCGGAGGAAAAAAUGUCUCGUGUUGCUAAAGCACCGGUCGUUG
+..((((...))))(((......)))....((((.((.(((((.....))))).)).)))). (-11.00)
+>ECP_3394
+UCACCAAUUGAAUCACGGGAGUAAAGACAGAUGAGCAUGCAAGAUCCGAUCGCGGAUAUGC
+((.((...........))))..................(((..(((((....))))).))) ( -8.20)
+>ECP_3395
+CCCGUUCCGCAAGUAAGGUAGGGUUACUAAAUGGCUAAGCAAUCAAUGAAAGCACGCGAAG
+(((...((........))..)))........(.((...((..((...))..))..)).).. ( -7.00)
+>ECP_3396
+CGAAACUAUCAAGUAAUUUGGAGUAGUACGAUGGCGAAACUGCAUGAUUACUACAAAGACG
+...........(((((((....(((((.((....))..)))))..)))))))......... ( -9.00)
+>ECP_3397
+UGGCACCAGAAGUACUCUAAGGAGCGAAUCAUGGCAGCGAAAAUCCGUCGUGAUGACGAAG
+(.((.(((((.....)))..)).)).).((((.((.(((......))).)).))))..... (-12.10)
+>ECP_3398
+AGUAGUAGUUGACAUUAGCGGAGCACUAAAAUGAUCCAAGAACAGACUAUGCUGAACGUCG
+((((.(((((.........(((.((......)).))).......)))))))))........ ( -7.40)
+>ECP_3399
+GACUUUACUGAACGAGAAGGCGGGUGCGUAAUGACCGAUAAAAUCCGUACUCUGCAAGGUC
+((((((.((........))(((((((((.................))))).)))))))))) (-11.40)
+>ECP_3400
+AACCACCUUUGUAACUAAGACGGUGAUGUAAUGAAAGCAAAAGAGCUGCGUGAGAAGAGCG
+...(((((((.......))).)))).....(((..(((......))).))).......... ( -7.90)
+>ECP_3401
+CGUAAAGGCCGUAAAUAAGGAGCGUCGCUGAUGUUACAACCAAAGCGUACAAAAUUCCGUA
+..................((((.((((((...((....))...)))).))....))))... ( -7.00)
+>ECP_3402
+GUCCGAUCGCUGAGACUCUGGAGACUAGCAAUGGGUCAGAAAGUACAUCCUAAUGGUAUUC
+(.((.((.(((.((.((....)).))))).)).)).)....(((((.........))))). ( -8.60)
+>ECP_3403
+AGCGAAGAAGAAAUAAGGUAGGAGGAAGAGAUGGAAACUAUCGCUAAACAUCGCCAUGCUC
+................((((((..((((.(((((...))))).)).....)).)).)))). ( -7.40)
+>ECP_3404
+GCCGUAGCAAAUAAUUUUAGAGGAUAAGCCAUGCCACGUUCUCUCAAGAAAGGUCCUUUUA
+((....))......(((((((((((..((...))...))))))).))))............ ( -6.60)
+>ECP_3405
+CGGCGCUGAGUAAGUCGGAGGAGUAAUACAAUGGCAGUUGUUAAAUGUAAACCGACAUCUC
+.......(((...(((((.........(((((....)))))..........)))))..))) (-10.50)
+>ECP_3406
+UGCUGUUAAGCAAGUUGAGGAGAUGCUGGCAUGAUUCGUGAAGAACGUCUGCUGAAGGUGC
+((((....))))..((.((.(((((....((((...)))).....))))).)).))..... (-13.80)
+>ECP_3407
+AACCAGCUGUGAAGGCGUAAGGAGAUAGCAAUGGAAUUAGUAUUGAAAGACGCGCAGAGCG
+.....(((.((...((((.....((((..(((...)))..)))).....)))).)).))). (-12.10)
+>ECP_3408
+AGGUCAUUGAGCGAUUGAGAGGUUGAAACAAUGAUUGGUUUAGUCGGUAAAAAAGUGGGUA
+.(.(((((...((((((((.((((........))))..)))))))).......))))).). ( -8.30)
+>ECP_3409
+CGUUUAUAAAAUAAUUGGAGCUCUGGUCUCAUGCAGAACCAAAGAAUCCGUAUCCGCCUGA
+................(((.((.((((.((.....)))))).))..)))............ ( -8.40)
+>ECP_3430
+UGAACGCCUAAAAGAUAAACGAGGAAACAAAUGGCUCGUACAACACCCAUCGCACGCUACC
+..................(((((...........)))))...................... ( -5.20)
+>ECP_3431
+ACAAUCCUGAAUUAACAACGGAGUAUUUCCAUGCCACGUCGUCGCGUCAUUGGUCAGCGUA
+..............((.(((..((((....))))..))).))(((...........))).. ( -7.80)
+>ECP_3432
+GAAGCAAAAGCUAAAACCAGGAGCUAUUUAAUGGCAACAGUUAACCAGCUGGUACGCAAAC
+..(((....)))...(((((..(((((...))))).............)))))........ ( -8.90)
+>ECP_3469
+UUCCGCAUAGCGAAAAUCAGGAAUCGAAAAAUGACUAAGCCCAUCGUUUUUAGUGGCGCAC
+((((...............))))...............((((((........)))).)).. ( -8.00)
+>ECP_3484
+GCCUGACAGACUAAGUAAGAUGGGGAAAGCAUGAGCACCAUUGUGAUUUUUUUAGCUGCUU
+......(((.(((((.(((((.(.((..((....))....)).).)))))))))))))... ( -9.30)
+>ECP_3527
+CAGCACACAUCUUUGCAGGAAAAAACGCUUAUGAAAAAUGUUGGUUUUAUCGGCUGGCGCG
+..(((........))).........((((..((((((((....))))).)))...)))).. ( -8.60)
+>ECP_3554
+CGCCAGAAGAUAUCGAUUGAGAGGAUUUGAAUGACUGACAAAAUGCAAAGUUUAGCUUUAG
+...((..((((.((......))..))))...)).............(((((...))))).. ( -2.30)
+>ECP_3555
+GCGAUGGUCACUUGCAUGGAGGCGUGGGCCAUGAAUAAGCGCGAUGCAAUCAAUCACAUUC
+(((((((((.(.(((......))).))))))).......)))(((.......)))...... (-12.60)
+>ECP_3556
+AGAGGCACUUUUUGCCCGAGAGGAUUAACAAUGAUUCGCUUUGAACAUGUCAGCAAGGCUU
+...((((.....)))).....((((((....))))))((((((..........)))))).. (-11.90)
+>ECP_3557
+AUGAAGCAACAGCGAGGAGUGUAGUCGCAAAUGGCGAAAGAAAAAAAACGUGGCUUUUUUU
+..(((((....(((..........((((.....))))...........))).))))).... ( -8.20)
+>ECP_3661
+AUGUGCAACAAAGAUAAGUAAGAGGCGGCUAUGUCUGAGAAAACUUUUCUGGUGGAAAUCG
+........((.(((.((((...(((((....)))))......)))).)))..))....... ( -7.60)
+>ECP_3662
+UAAAUCCACACGUAUCCAGCACGAAAUAAUAUGCAAAAGUUUGAUACCAGGACCUUCCAGG
+....(((....(((((.(((..................))).)))))..)))......... ( -5.90)
+>ECP_3709
+CGAAGGUACUGAAGAACAUCAGGAUGCCUGAUGAACCAACGUAAUGCUUCAAUGACUGUGA
+.((((.(((.......(((((((...))))))).......)))...))))........... (-12.20)
+>ECP_3731
+CCCAGCACAUCCAUAAGUCAGCUAUUUACUAUGCUCGAAUUGCUUUACACCGCCCUUCUCU
+...................(((..........))).(((..((........))..)))... ( -3.30)
+>ECP_3732
+ACCUGCCACCGAAAACGCAUUGAGGUUGUUAUGCAAAAACGGGCGAUUUAUCCGGGUACUU
+(((((......(((.(((.(((...((((...))))...)))))).)))...))))).... ( -9.40)
+>ECP_3735
+UCGAGCUAAUUUGAUUUUUGGAGAAUAGACAUGUCCCGAGUCUGCCAAGUUACUGGCAAGC
+............(((((..(((.(.......).))).)))))(((((......)))))... (-11.10)
+>ECP_3737
+UUCUGGUGUCACCCAACAGGAAAAAUCAUCAUGAGCCUGGCCGGUAAAAAAAUCGUUCUCG
+..........(((...((((...............))))...)))................ ( -6.70)
+>ECP_3738
+UAUUACUCGACGAGAUCGUGACCCGUUAUGAUGAAAAAAAUCGACGUUAAGAUUCUGGACC
+..........(.(((((.((((..(((..(((.......)))))))))).)).))).)... ( -6.40)
+>ECP_3746
+UAUUUCGCUAAUCACAUACGAAAGAUACUCAUGGCUCAAGGCACGCUUUAUAUUGUUUCUG
+...................((((.(.......(((.........)))......).)))).. ( -3.20)
+>ECP_3748
+GGUCGUCGUUAAUCACAAAGCGGGUCGCCCUUGUAUCUGUUUGAAAGCCUGAAUCAGCUGA
+(((..(((.........(((.((....))))).........)))..)))............ ( -8.10)
+>ECP_3900
+AACCCAAGUAUAAAUGAGCGAGAAACGUUGAUGUCGAAUUCUUAUGACUCCUCCAGUAUCA
+...............(((.(((...(((.((........))..))).))))))........ ( -5.70)
+>ECP_3902
+AUUUAAUCAGAACAUUGUCAUCGUAAACCUAUGAAAUUUACCGUAGAACGUGAGCAUUUAU
+...............(((((.(((....(((((........))))).)))))).))..... ( -6.00)
+>ECP_3903
+UUAUCGACUUUUGUUCGAGUGGAGUCCGCCGUGUCACUUUCGCUUUGGCAGCAGUGUCUUG
+......(((.(((((.((((((((...((...))...)))))))).))))).)))...... (-11.30)
+>ECP_3904
+GAAUUUAUUCAAGUUUAGGUAGAAAUCGCCAUGAAACGCACUUUUCAACCGUCUGUACUGA
+...........(((...(((.((((..((........))...)))).)))......))).. ( -6.10)
+>ECP_3905
+CCGUUUCUAAGUAAUAAAGCUAACCCCUGAGUGGUUAAGCUCGCAUUUCCCAGGGAGUUAC
+....................(((((((((((((..........))))...))))).)))). (-11.00)
+>ECP_3906
+CGGACCAUUUGAUACCAGAGAACACUAACGAUGGAUUCGCAACGCAAUCUUUUAGUCAUCG
+(((((((((....................))))).))))...................... ( -4.70)
+>ECP_3928
+CGACAACGAUAUAAAUCGGAAUCAAAAACUAUGUGUGGAAUUGUUGGCGCGAUCGCGCAAC
+(((((((.(((((..................))))).)..))))))((((....))))... (-11.80)
+>ECP_3929
+AUUCGUUCUCAAAUUACAGUCAGGACGCGUAUGUUGAAUAAUGCUAUGAGCGUAGUGAUCC
+..................((((..((((.(((((........)).))).))))..)))).. (-11.20)
+>ECP_3974
+UUUACCCCAAGUUUAAGAACUCACACCACUAUGAAUCUUACCGAAUUAAAGAAUACGCCGG
+.............(((((..(((........))).)))))(((...............))) ( -3.10)
+>ECP_3985
+GGCGUUGGCGAUUGCCGCCGGGGAGGUCGCAUGAGUCUGCUGCAAUUCAGUGGCCUGUUUG
+..(.((((((.....)))))).)(((((((.(((((........))))))))))))..... (-23.00)
+>ECP_3996
+CGCUGAAGUCUAUAACGGAGACGCCCCGGCAUGAGUAUCCUGGUCACCCGCCCGUCUCCCG
+................(((((((...(((..(((.((...)).))).)))..))))))).. (-16.30)
+>ECP_3997
+GGACCACGGAUGAUAAUGACGGUAACAAGCAUGUUAGACAAUGUUUUAAGAAUUGCCACAC
+....................(((((.((((((........))))))......))))).... ( -5.90)
+>ECP_4050
+GACCAAACGGCUGGAAAAACUGGAGGCUAAAUGACGCCAGGUGAAGUACGGCGCCUAUAUU
+..(((......)))..........(((........)))(((((........)))))..... (-11.10)
+>ECP_4056
+CGUAUAAUGGGCGCAGAUUAAGAGGCUACAAUGGACGCCAUGAAAUAUAACGAUUUACGCG
+..........(((.(((((...........((((...))))..........))))).))). ( -7.30)
+>ECP_4063
+GACUUUCUGGCGUGAAUGAUGGAGUAAUACGUGAAAACAUUAAUUCUUUUCUCAACAAGGG
+..(((..(((...((((((((................)))).)))).....)))..))).. ( -3.60)
+>ECP_4075
+UGAAUUAUCAACAGACGCAUUUUGUGAUGAGUGCGCCUGAUAUUCGCCACCUACCUUCCGA
+.((((.((((...(.(((((((......)))))))).))))))))................ (-12.30)
+>ECP_4142
+UGACGAACGAAUAAAUACAGCGAAACGAUAGUGGCACAACGAGAUUAUGUACGCCGCAGCC
+..............................((((((((.........)))..))))).... ( -7.00)
+>ECP_4184
+ACCUGUUCGACAAAGAUUAUGAGACAGUCUAUGGCUACCAAACUGCAGGACGGGAAUACAC
+.(((((((..((.(((((.......))))).(((...)))...))..)))))))....... (-10.90)
+>ECP_4186
+UAGCCUCGUUUUUGCAUCAGGAAAGCAGCUAUGAACCACUCCUUAAAACCCUGGAACACAU
+((((...((((((.......)))))).))))........(((..........)))...... ( -7.70)
+>ECP_4187
+AGGUGAAGUGAGCGCAGUGGAGACAAUUUCAUGAAGGAUAACACCGUGCCACUGAAAUUGA
+......((((.((((.(((......................))).))))))))........ (-12.80)
+>ECP_4188
+GAUAGAGCUAUGACCGCCAGAAACAUGCUUAUGAGUAUAAAAGAGCAAACGUUAAUGACGC
+..............((.((..(((.(((((.(........).)))))...)))..)).)). ( -6.30)
+>ECP_4194
+GUUUGUAGAAUACUUCUGACAGGUUGGUUUAUGAGUGCGAAUACCGAAGCUCAAGGAAGCG
+.(((((((((...)))).)))))..(.(((.(((((.((.....))..)))))..))).). (-10.40)
+>ECP_4195
+UAUCCUUUAUCACUGGCCUGAGGUUCUGAGAUGUCUGAAGCUCCUAAAAAGCGCUGGUACG
+...........(((((((((((.(((.((....)).))).)))......)).))))))... (-13.20)
+>ECP_4198
+UUCUCUGGCAAACAUCCAGGAGCAAAGCUAAUGGCUUUAAAUCUUCAAGACAAACAAGCGA
+(((.((((.......))))))).((((((...))))))....................... ( -8.30)
+>ECP_4199
+AACUUAUUCUGAUAUUCAGGAACAAUUUAAAUGUCUAUCACUAAAGAUCAAAUCAUUGAAG
+......((((((...)))))).((((......((((........))))......))))... ( -5.80)
+>ECP_4200
+GGUCGACUUGUCAGCGAGCUGAGGAACCCUAUGGUUUACUCCUAUACCGAGAAAAAACGUA
+(.(((.((....))))).).((((((((....))))).))).................... ( -9.50)
+>ECP_4201
+GAUUGUGCUAACUCCGACGGGAGCAAAUCCGUGAAAGAUUUAUUAAAGUUUCUGAAAGCGC
+....(((((..((((....)))).(((((.......)))))...............))))) ( -9.60)
+>ECP_4257
+GCGUCACCGUUGUACUAAGAGGAAAAAAAUAUGGAGUGGAGUCUGACGCAGAAUAAGCUGC
+((((((...((.((((..................)))).))..))))))............ (-10.20)
+>ECP_4261
+GCAUAACUGUAUAUACACCCAGGGGGCGGAAUGAAAGCGUUAACGGCCAGGCAACAAGAGG
+......(((..........))).((.((.((((....))))..)).))............. ( -7.20)
+>ECP_4268
+CCAUUCUUUAUCUCGGUAACUCCAUUCACUAUGGCAGGAAAUAAACCCUUCAACAAACAGC
+...................((((((.....)))).))........................ ( -4.00)
+>ECP_4287
+CAGAACGAUUUUUUUUCAGGAGACACGAACAUGGCCAGCAGAGGCGUAAACAAGGUUAUUC
+.....................(((.........(((......))).........))).... ( -5.50)
+>ECP_4386
+GAUACGGACUUUCUCAAAGGAGAGUUAUCAAUGAAUAUUCGUCCAUUGCAUGAUCGCGUGA
+......((((((((....))))))))..(((((..........)))))((((....)))). (-10.80)
+>ECP_4387
+CUGAACAUACGAAUUUAAGGAAUAAAGAUAAUGGCAGCUAAAGACGUAAAAUUCGGUAACG
+(((((..((((..((((.(..................)))))..))))...)))))..... ( -4.90)
+>ECP_4404
+GAACGACAAAACAAUGGCCUGGAGGCUACCUUGUUAAAUUCAUUUAAACUUUCGCUACAGU
+.........((((((((((....)))))..))))).......................... ( -8.00)
+>ECP_4405
+CCCAUCAGGGGCGACCAGGAGUCUGUACGAUUGAGUAAAAAUAAACUCUCCAAAGGCCAGC
+.((....))(((.....((((....(((......)))..........))))....)))... ( -9.80)
+>ECP_4406
+UAUAGUCACUGUGAAUGGGUGGAAAAUAGCAUGAGUGCCAAUGAAAACAACCUGAUUUGGA
+.....(((((.......)))))......(((....)))............((......)). ( -5.40)
+>ECP_4413
+UUGUUAACCCGGAAGUGACUGAUAAAAACCAUGAUGAAUCGAGUAAUUCCGCUCCCUGAUG
+.........(((((...((((((..............))).)))..))))).......... ( -7.00)
+>ECP_4447
+UUGAAUUGAUAGAUUCUGGAGACUAGCCAUAUGGCACGUUAUUUCCGUCGUCGCAAGUUCU
+..(((((....(((..(((((((..(((....)))..)))...))))..)))...))))). (-13.50)
+>ECP_4476
+GUUUGCCACAUAUUUUUAAAGGAAACAGACAUGAGCUUACUCAACGUCCCUGCGGGUAAAG
+.((((((............(((.....(((.((((....))))..))))))...)))))). ( -9.20)
+>ECP_4507
+UUUCAACCUGAAUACGGCAACCUGGAAAUAAUGGAAAAGACAUAUAACCCACAAGAUAUCG
+......................(((.....(((.......))).....))).......... ( -2.10)
+>ECP_4510
+AAAAGACGAGUUUUUACGGGCGUAUUUAAAGUGAUAAUCAUAAGAUAUCUGGUGCGGGAGA
+..............(((.((.((((((...((((...)))).)))))))).)))....... ( -6.60)
+>ECP_4511
+CGCCAGUUUUUCGCGUAAAGGAGCGGUGUGAUGCAACCUUUUGGCGUACUUGACCGCUAUA
+(((.........)))......((((((....(((..((....)).)))....))))))... (-13.40)
+>ECP_4692
+CCAAAUUCCACCAGGAUUCAGAGGGUAACGAUGAAAAACGUUGGCGACCUGAUGCAACGCC
+......(((....)))..((..((((..(((((.....)))))...))))..))....... (-11.20)
+>ECP_4693
+UCGUUCAUCGUUCCAUAUUUGAGAAACAGUAUGUCUUCCAGAGUUUUGACCCCGGACGUCG
+.(((((...(((.....((((.((((((...))).))))))).....)))...)))))... ( -9.00)

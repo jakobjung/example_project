@@ -1,3 +1,7 @@
+
+
+
+
 ##
 ##   Title:       Create MIC output
 ##
@@ -16,6 +20,7 @@ library(ggtext)
 library(stringr)
 library(readr)
 library(tidyr)
+library(circlize)
 
 # load data
 pnas_filtered <- read_tsv("./data/pnas_predictors_mic_upec.tsv")
@@ -110,7 +115,8 @@ make_kegg_plot <- function (threshold){
   # The total number of genes is shown in grey and the inhibited genes in red.
   # The plot is saved as svg file. Order plot by total number of genes.
 
-  df_kegg$pw_name <- factor(df_kegg$pw_name, levels = df_kegg$pw_name[order(df_kegg$tot_genes)])
+  # order df_kegg by tot_genes and then by both
+  df_kegg$pw_name <- factor(df_kegg$pw_name, levels = df_kegg$pw_name[order(df_kegg$tot_genes, df_kegg$`UPEC only`)])
 
   # create stacked barplot
   kegg_plot <- ggplot(df_kegg[df_kegg$tot_genes > 4,], aes(x = pw_name)) +
@@ -122,8 +128,8 @@ make_kegg_plot <- function (threshold){
                                   "neither" = "lightgrey")) +
     coord_flip() +
     theme_classic() +
-    theme(axis.text.y = ggtext::element_markdown(size = 12, colour = rev(ifelse(df_kegg[df_kegg$tot_genes > 4,]$pw_id %in% pw_acpp,
-                                                                "blue", "black"))),
+    theme(axis.text.y = ggtext::element_markdown(size = 12, colour = rev(ifelse(df_kegg[df_kegg$tot_genes > 4,]$pw_name %in% gsub(" - Escherichia coli K-12 MG1655", "", list_kegg[pw_acpp]), "blue", "black"))),
+                                                 #colour = rev(ifelse(df_kegg[df_kegg$tot_genes > 4,]$pw_id %in% pw_acpp, "blue", "black"))),
           axis.text.x = element_text(size = 12),
           axis.title = element_text(size = 13),
     #put legend in lower right part of figure
@@ -296,12 +302,291 @@ draw(ht_list)
 draw(lgd, x = unit(31, "cm"), y = unit(3.4, "cm"), just = c("left", "bottom"))
 dev.off()
 
+# pnas_filtered: take only the ones which have 2 entries per gene_name
+pnas_filtered_only_2 <- pnas_filtered %>%
+  group_by(gene_name) %>%
+  filter(n() == 2)%>% select(gene_name) %>% unique %>% unlist()
+
+
+# create per gene the lower of MICs in upec
+lowest_mic_gene <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  group_by(gene_name) %>%
+  summarise(lowest_mic_upec = min(MIC_UPEC, na.rm = T)) %>%
+  select(gene_name, lowest_mic_upec)
+
+avg_mic_gene <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  group_by(gene_name) %>%
+  summarise(avg_mic_upec = mean(MIC_UPEC, na.rm = T)) %>%
+  select(gene_name, avg_mic_upec)
+
+# get difference between 2 ppnas per gene
+diff_mic_gene <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  mutate(MIC_UPEC = log2(MIC_UPEC)) %>%
+  group_by(gene_name) %>%
+  summarise(diff_mic_upec = diff(range(MIC_UPEC, na.rm = T))) %>%
+    select(gene_name, diff_mic_upec)
+
+pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  # add a row for average MIC of upec for each gene
+  left_join(lowest_mic_gene, by = "gene_name") %>%
+  # add a row for difference in MIC of upec for each gene
+  left_join(diff_mic_gene, by = "gene_name") %>% filter(lowest_mic_upec<5) %>% select(gene_name, diff_mic_upec, MIC_UPEC)
+
+# now create a plot from pnas_filtered, in which y axis is genes and x axis is MIC of UPEC. So there should be 2
+# connedted dots per gene.
+mic_plot <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  # add a row for average MIC of upec for each gene
+    left_join(lowest_mic_gene, by = "gene_name") %>%
+  # add avg mic
+    left_join(avg_mic_gene, by = "gene_name") %>%
+  # add a row for difference in MIC of upec for each gene
+    left_join(diff_mic_gene, by = "gene_name") %>%
+  mutate(MIC_UPEC = log2(MIC_UPEC)) %>%
+  # make difference a factor with increasing levels
+  mutate(diff_mic_upec = factor(diff_mic_upec, levels = c(0, 1, 2, 3, 4))) %>%
+  # make gene_name a factor and sort levels by lowest MIC and then by avg MIC
+    mutate(gene_name = factor(gene_name, levels = lowest_mic_gene$gene_name[order(avg_mic_gene$avg_mic_upec, lowest_mic_gene$lowest_mic_upec,
+
+                                                                                  decreasing = T)])) %>%
+ #   mutate(gene_name = factor(gene_name, levels = gene_name[order(MIC_UPEC)])) %>%
+  ggplot(aes(x = MIC_UPEC, y = gene_name, color = diff_mic_upec)) +
+  # make points, but jitter if there are multiple points at the same x value
+    geom_point(size = 0.5) +
+    # make points connected by gene_name
+    geom_line() +
+  # make x axis ticks at log2(1.25, 2.5, 5,10,20) and manually add labels
+    scale_x_continuous(breaks = log2(c(1.25, 2.5, 5, 10, 20)), labels = c("1.25", "2.5", "5", "10", ">10")) +
+  # add theme
+    theme_classic() +
+  ylab("Target genes") +
+  # add label for legend
+    labs(color = "Difference in MIC") +
+  # increase size of x axis labels
+    theme(axis.text.x = element_text(size = 12),
+          axis.title = element_text(size = 15),
+    # remove row names
+            axis.text.y = element_blank(),
+          # add legend to inside of plot upper right
+            legend.position = c(0.85, 0.9),
+    legend.text = element_text(size = 10)
+    )  +
+  # change legend ticks to 0, 1, 2, 3, 4
+  scale_color_viridis_d(labels = c("0", "2", "4", "8", ">8"),
+                        breaks = c("0", "1", "2", "3", "4"))
+
+mic_plot
+
+# save plot as svg file
+svg(filename = "./analysis/gene_specific_predictors/MIC_plot.svg", width = 5, height = 10, pointsize = 12)
+print(mic_plot + guides(color = guide_legend(override.aes = list(size=3))))
+dev.off()
+
+
+# get difference between 2 ppnas per gene
+diff_mic_gene_k12 <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  mutate(MIC_K12 = log2(MIC_K12)) %>%
+  group_by(gene_name) %>%
+  summarise(diff_mic_k12 = diff(range(MIC_K12, na.rm = T))) %>%
+  select(gene_name, diff_mic_k12)
+
+lowest_mic_gene_k12 <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  group_by(gene_name) %>%
+  summarise(lowest_mic_k12 = min(MIC_K12, na.rm = T)) %>%
+  select(gene_name, lowest_mic_k12)
+
+avg_mic_gene_k12 <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  group_by(gene_name) %>%
+  summarise(avg_mic_k12 = mean(MIC_K12, na.rm = T)) %>%
+  select(gene_name, avg_mic_k12)
+
+# now create a plot from pnas_filtered, in which y axis is genes and x axis is MIC of K12. So there should be 2
+# connedted dots per gene.
+mic_plot_k12 <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  # add a row for average MIC of upec for each gene
+  left_join(lowest_mic_gene, by = "gene_name") %>%
+  # add a row for difference in MIC of upec for each gene
+  left_join(diff_mic_gene_k12, by = "gene_name") %>%
+  mutate(MIC_K12 = log2(MIC_K12)) %>%
+  # make difference a factor with increasing levels
+  mutate(diff_mic_k12 = factor(diff_mic_k12, levels = c(0, 1, 2, 3, 4))) %>%
+  # make gene_name a factor and sort levels by lowest MIC
+  mutate(gene_name = factor(gene_name, levels = lowest_mic_gene_k12$gene_name[order(avg_mic_gene$avg_mic_upec,
+                                                                                    lowest_mic_gene$lowest_mic_upec,
+                                                                                    decreasing = T)])) %>%
+  #   mutate(gene_name = factor(gene_name, levels = gene_name[order(MIC_UPEC)])) %>%
+  ggplot(aes(x = MIC_K12, y = gene_name, color = diff_mic_k12)) +
+  # make points, but jitter if there are multiple points at the same x value
+  geom_point(size = 0.5) +
+  # make points connected by gene_name
+  geom_line() +
+  # make x axis ticks at log2(1.25, 2.5, 5,10,20) and manually add labels
+  scale_x_continuous(breaks = log2(c(1.25, 2.5, 5, 10, 20)), labels = c("1.25", "2.5", "5", "10", ">10"),
+                        limits = log2(c(1.25, 20))) +
+  # add theme
+  theme_classic() +
+  ylab("Target genes") +
+  # increase size of x axis labels
+  theme(axis.text.x = element_text(size = 12),
+        axis.title = element_text(size = 15),
+        legend.position = "none",
+        # remove row names
+        axis.text.y = element_blank()
+    )  +
+    # change legend to viridis, keep color scale similar to previous plot
+    scale_color_manual(values = c(viridis(5)[1], viridis(5)[2], viridis(5)[3], viridis(5)[4], viridis(5)[5]),
+                       breaks = c("0", "1", "2", "3", "4"),
+                       labels = c("0", "1", "2", "3", "4"))
+
+mic_plot_k12
+
+# save plot as svg file
+svg(filename = "./analysis/gene_specific_predictors/MIC_plot_k12.svg", width = 5, height = 10, pointsize = 12)
+print(mic_plot_k12)
+dev.off()
+
+# save both mic plots next to each other as svg file using cowplot
+library(cowplot)
+svg(filename = "./analysis/gene_specific_predictors/MIC_plot_combined_same_order.svg", width = 10, height = 10, pointsize = 12)
+plot_grid(mic_plot+ guides(color = guide_legend(override.aes = list(size=3))), mic_plot_k12, ncol = 2)
+dev.off()
+
+
+# do same plots but
+
+
+
+mic_plot_k12 <- pnas_filtered %>%
+  filter(gene_name %in% pnas_filtered_only_2) %>%
+  # add a row for average MIC of upec for each gene
+  left_join(lowest_mic_gene, by = "gene_name") %>%
+  # add a row for difference in MIC of upec for each gene
+  left_join(diff_mic_gene_k12, by = "gene_name") %>%
+  mutate(MIC_K12 = log2(MIC_K12)) %>%
+  # make difference a factor with increasing levels
+  mutate(diff_mic_k12 = factor(diff_mic_k12, levels = c(0, 1, 2, 3, 4))) %>%
+  # make gene_name a factor and sort levels by lowest MIC
+  mutate(gene_name = factor(gene_name, levels = lowest_mic_gene_k12$gene_name[order(avg_mic_gene_k12$avg_mic_k12,
+                                                                                    lowest_mic_gene_k12$lowest_mic_k12,
+                                                                                    decreasing = T)])) %>%
+  #   mutate(gene_name = factor(gene_name, levels = gene_name[order(MIC_UPEC)])) %>%
+  ggplot(aes(x = MIC_K12, y = gene_name, color = diff_mic_k12)) +
+  # make points, but jitter if there are multiple points at the same x value
+  geom_point(size = 0.5) +
+  # make points connected by gene_name
+  geom_line() +
+  # make x axis ticks at log2(1.25, 2.5, 5,10,20) and manually add labels
+  scale_x_continuous(breaks = log2(c(1.25, 2.5, 5, 10, 20)), labels = c("1.25", "2.5", "5", "10", ">10"),
+                        limits = log2(c(1.25, 20))) +
+  # add theme
+  theme_classic() +
+  ylab("Target genes") +
+  # increase size of x axis labels
+  theme(axis.text.x = element_text(size = 12),
+        axis.title = element_text(size = 15),
+        legend.position = "none",
+        # remove row names
+        axis.text.y = element_blank()
+    )  +
+    # change legend to viridis, keep color scale similar to previous plot
+    scale_color_manual(values = c(viridis(5)[1], viridis(5)[2], viridis(5)[3], viridis(5)[4], viridis(5)[5]),
+                       breaks = c("0", "1", "2", "3", "4"),
+                       labels = c("0", "1", "2", "3", "4"))
+
+
+library(cowplot)
+svg(filename = "./analysis/gene_specific_predictors/MIC_plot_combined_both_sorted.svg", width = 10, height = 10, pointsize = 12)
+plot_grid(mic_plot+ guides(color = guide_legend(override.aes = list(size=3))), mic_plot_k12, ncol = 2)
+dev.off()
 
 
 
 
 
 
+# OK now create a circlize plot which shows for each essential gene the location, the MICs of UPEC and the MICs of K12.
+
+# we first need to generate a df with one gene per row and the MICs of UPEC and K12 in the columns (each have 2 values)
+df_gene_wise <- pnas_filtered %>%
+  select(gene_name, locus_tag, MIC_UPEC, MIC_K12) %>%
+  # make new column PNA. if there are duplicate entries for gene_name, enumerate them (1 and 2)
+    group_by(gene_name) %>%
+    mutate(PNA = row_number()) %>%
+    ungroup() %>%
+  # compress df, so that each gene has only one row from MIC_K12 make MIC_K12_1 and MIC_K12_2 if there are 2 entries
+  # and the same for MIC_UPEC
+    pivot_wider(names_from = PNA, values_from = c(MIC_UPEC, MIC_K12))
+  # add nr 1 or 2 to val
+
+
+# OK now import the ess. gene gff file and extract the start and end position of each gene
+# import gff file
+gff <- read_delim("./data/reference_sequences/e_coli_K12.gff3", delim = "\t", skip = 3,
+                  col_names = c("seqname", "source", "feature", "start", "end", "score", "strand", "frame", "attributes"))
+
+# get only ess. genes
+gff_egenes <- gff %>% mutate(locus_tag = gsub(".+;locus_tag=(b\\d+).*", "\\1", attributes)) %>%
+  # keep only one of 2 entries for each gene/CDS if it has same start, end position and locus_tag
+    group_by(locus_tag) %>% filter(row_number()==1) %>% ungroup() %>%
+    # keep only genes and CDS
+    filter(feature %in% c("gene", "CDS")) %>%
+    # keep only locus tags that are in gene_specific_DF$locus_tag
+    filter(locus_tag %in% df_gene_wise$locus_tag) %>%
+    # add length column to gff
+    mutate(length = end - start + 1)
+
+# add start and end position to df_gene_wise
+df_gene_wise <- df_gene_wise %>%
+  left_join(gff_egenes %>% select(locus_tag, start, end, length), by = "locus_tag")
+
+
+# make df with 1 gene and start at 1 and end at 4599600
+df_plot <- data.frame(gene_name = "E. coli genome", start = 1, end = 4650000)
+
+gene_locations_upec <- df_gene_wise %>% mutate(gene = "E. coli genome") %>%
+    mutate(MIC_UPEC_1 = log2(MIC_UPEC_1), MIC_UPEC_2 = log2(MIC_UPEC_2)) %>%
+  select(gene, start, end, MIC_UPEC_1, MIC_UPEC_2) %>% as.data.frame()
+
+# same for K12
+gene_locations_k12 <- df_gene_wise %>% mutate(gene = "E. coli genome") %>%
+  mutate(MIC_K12_1 = log2(MIC_K12_1), MIC_K12_2 = log2(MIC_K12_2)) %>%
+  select(gene, start, end, MIC_K12_1, MIC_K12_2) %>% as.data.frame()
+
+
+
+svg("./analysis/circle_plot_mics.svg")
+circos.clear()
+# initialize circos plot but remove numbers on the outside of the plot
+circos.genomicInitialize(df_plot)
+text(0, 0, "E. coli genome", cex = 1, italics = TRUE)
+
+# now agg ess. genes to the circle
+
+# circos.initialize(df_plot, xlim = c(0, 1))
+# add the essential genes to the plot
+#circos.genomicHeatmap(gene_locations_upec, side = "outside")
+circos.genomicTrack(gene_locations_upec, panel.fun = function(region, value, ...) {
+  #add rect, blue!
+    circos.genomicRect(region, value, border = alpha("black", 0.3), ...)
+})
+
+circos.genomicTrack(gene_locations_upec, panel.fun = function(region, value, ...) {
+    circos.genomicPoints(region, value, col = alpha("black", 0.5), bg = alpha("#b5cde1", 0.5), cex = 1,  pch = 21)
+})
+# same for K12
+circos.genomicTrack(gene_locations_k12, panel.fun = function(region, value, ...) {
+    circos.genomicPoints(region, value, col = alpha("black", 0.5), bg = alpha("#66cdaa", 0.5), cex = 1,  pch = 21)
+})
+dev.off()
+circos.clear()
 
 
 
