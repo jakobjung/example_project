@@ -7,7 +7,14 @@
 *.fastq.gz
 *fastqc.zip                    
 *.fq.gz
+*.fasta*
+*.html
+*.tsv
+*.csv
+*.xlsx
 *.tar*
 */ref/*         
 *.zip
 *.gz
+*.svg
+*.pdf
